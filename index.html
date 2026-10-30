@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bunny｜2026 半马 PB + 减脂训练计划</title>
+<style>
+body{font-family:"Microsoft YaHei",Arial,sans-serif;line-height:1.55;max-width:1120px;margin:32px auto;padding:0 20px;color:#17212b;background:#fafcff}
+h1,h2{color:#093d6b} h1{margin-bottom:4px} h2{border-bottom:2px solid #bddcff;padding-bottom:5px;margin-top:30px}
+.note{background:#eaf5ff;border-left:5px solid #1677c8;padding:12px 16px}.warn{background:#fff5e8;border-left:5px solid #e48a1d;padding:12px 16px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0 18px}th,td{border:1px solid #cbd9e6;padding:8px;vertical-align:top}th{background:#e7f2fc;text-align:left}.week{background:#d6ecff;font-weight:700}
+ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
+.tracker{background:#f1f8ff;border:1px solid #bddcff;border-radius:8px;padding:16px;margin:20px 0}.tracker-grid{display:grid;grid-template-columns:repeat(3,minmax(170px,1fr));gap:10px}.tracker label{font-weight:700;color:#093d6b}.tracker input,.tracker select,.tracker textarea{box-sizing:border-box;width:100%;margin-top:3px;padding:7px;border:1px solid #9db9d3;border-radius:4px;font:inherit}.tracker textarea{min-height:74px;resize:vertical}.tracker .full{grid-column:1/-1}.buttons{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}button{background:#0969b3;color:#fff;border:0;border-radius:4px;padding:10px 13px;min-height:44px;font:inherit;cursor:pointer}button.secondary{background:#526b7e}button.danger{background:#a84632}.log-table{font-size:13px;display:block;overflow-x:auto}.log-table td{word-break:break-word}nav{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:5px;color:#064979;background:#dceeff;text-decoration:none}
+@media(max-width:700px){body{margin:14px auto;padding:0 12px}h1{font-size:23px}h2{font-size:20px}.tracker{padding:12px}.tracker-grid{grid-template-columns:1fr}.tracker input,.tracker select,.tracker textarea{min-height:44px;font-size:16px}.buttons button{flex:1 1 100%}#plan-table,#plan-table tbody,#plan-table tr,#plan-table td{display:block;width:auto}#plan-table{border:0}#plan-table th{display:none}#plan-table tr{margin:10px 0;border:1px solid #cbd9e6;border-radius:6px;overflow:hidden}#plan-table td{border:0;border-bottom:1px solid #e1eaf2}#plan-table td:first-child{font-weight:700;background:#e7f2fc}#plan-table tr:not(.week) td:nth-child(2)::before{content:"训练：";font-weight:700}#plan-table tr:not(.week) td:nth-child(3)::before{content:"重点：";font-weight:700}}
+@media print{body{max-width:none;margin:0;font-size:11px}h2{margin-top:16px}table{font-size:10px}.note,.warn{padding:7px}}
+</style>
+</head>
+<body>
+<h1>Bunny｜半马 PB + 减脂训练计划</h1>
+<nav><a href="#today">今日计划</a><a href="#daily-log">训练记录</a><a href="#body-log">体测记录</a><a href="#backup">数据同步</a><a href="#all-plan">全部计划</a></nav>
+<p><strong>周期：</strong>2026-10-26 至 2026-12-31　<strong>比赛：</strong>11 月 29 日杭州千岛湖半马　<strong>目标：</strong>健康减脂，并冲击半马 2:20。</p>
+<div class="note"><strong>当前基线：</strong>湘湖半马净成绩 2:33:13（7:16/km）；近期最长 20 km；周跑量约 15–40 km。2:20 需均配约 <strong>6:38/km</strong>，比最近比赛快 38 秒/km。A 目标为 2:20；B 目标 2:25（6:52/km）；当训练或天气不支持时以 B 目标出发，后程再决定是否加速。</div>
+<div class="warn"><strong>安全规则：</strong>本计划的最大心率为估算值，优先服从身体信号。膝内上方疼痛达到 3/10、改变跑姿、跑后 24 小时未改善，或骶髂痛向腿部放射时，停止质量跑，改为 30–45 分钟低强度骑车/椭圆机，并联系运动医学或康复专业人士。不采用极端节食或赛前快速减重。</div>
+
+<h2 id="today">今日计划</h2>
+<div id="today-plan" class="note">正在读取今日计划……</div>
+
+<h2 id="backup">电脑与手机同步</h2>
+<div class="tracker">
+<p class="small">记录保存在当前设备、当前浏览器和当前网址中，不会自动同步。先在有数据的设备导出 JSON，通过你信任的方式传到另一台设备，再在目标设备导入。同一天的冲突记录会在确认后以导入文件为准；其他日期保留。备份包含敏感健康信息且未加密，请妥善保管，不要上传到公开仓库。</p>
+<div class="buttons"><button type="button" id="export-json">导出全部记录 JSON</button><button type="button" class="secondary" id="import-button">导入 JSON 并合并</button></div>
+<input id="import-json" type="file" accept=".json,application/json" hidden>
+<p id="backup-message" class="small" aria-live="polite"></p>
+</div>
+
+<h2 id="body-log">体脂秤报告预览与体测记录</h2>
+<div class="tracker">
+<p class="small">选择图片后可在本页面预览；本版本不能自动识别或保存图片，请核对报告并手动输入数值。结构化体测数据只保存在当前浏览器，可导出同步。如将报告图片发送到对话，我也可协助提取。</p>
+<div class="tracker-grid">
+<label class="full">上传体脂秤报告图片<input id="body-image" type="file" accept="image/*"></label>
+<img id="body-preview" alt="体脂报告预览" hidden style="max-width:100%;max-height:420px;border:1px solid #cbd9e6;border-radius:4px">
+<label>测量日期<input id="body-date" type="date"></label>
+<label>体重（kg）<input id="body-weight" type="number" min="35" max="150" step="0.1"></label>
+<label>体脂率（%）<input id="body-fat-percent" type="number" min="1" max="70" step="0.1"></label>
+<label>脂肪量（kg）<input id="body-fat-mass" type="number" min="1" max="80" step="0.1"></label>
+<label>肌肉量（kg）<input id="body-muscle" type="number" min="10" max="100" step="0.1"></label>
+<label>骨骼肌量（kg）<input id="body-skeletal-muscle" type="number" min="5" max="70" step="0.1"></label>
+<label>内脏脂肪等级<input id="body-visceral-fat" type="number" min="1" max="30" step="0.5"></label>
+<label>身体水分（%）<input id="body-water-percent" type="number" min="20" max="80" step="0.1"></label>
+<label>基础代谢（kcal）<input id="body-bmr" type="number" min="500" max="3000" step="1"></label>
+<label>腰臀比<input id="body-whr" type="number" min="0.5" max="1.5" step="0.01"></label>
+<label>静息心率（bpm）<input id="body-resting-hr" type="number" min="35" max="130" step="1"></label>
+<label class="full">其他报告数值或备注（如蛋白量、骨盐量、身体评分、节段脂肪/肌肉不平衡）<textarea id="body-notes" maxlength="700" placeholder="如：蛋白质 9.9 kg；骨盐量 2.9 kg；身体评分 79；躯干脂肪 10.5 kg；下肢肌肉轻度不均衡。"></textarea></label>
+</div>
+<div class="buttons"><button type="button" id="save-body">保存/更新本次体测</button><button type="button" class="secondary" id="copy-body">复制最新体测数据</button></div>
+<p id="body-message" class="small" aria-live="polite"></p>
+<table class="log-table"><thead><tr><th>日期</th><th>体重</th><th>体脂率/脂肪量</th><th>肌肉/骨骼肌</th><th>内脏脂肪</th><th>水分</th><th>基础代谢/腰臀比/静息心率</th></tr></thead><tbody id="body-rows"><tr><td colspan="7">尚无体测记录。</td></tr></tbody></table>
+</div>
+
+<h2 id="daily-log">每日训练记录与调整反馈</h2>
+<div class="tracker">
+<p class="small">选择日期可查看并编辑已保存的记录。点击保存后，记录只保存在当前浏览器；点击“复制反馈”后粘贴到对话中，我可据此建议调整后续训练和拉伸模板，网页不会自动调整。</p>
+<div class="tracker-grid">
+<label>日期<input id="log-date" type="date"></label>
+<label>晨重（kg）<input id="log-weight" type="number" min="35" max="150" step="0.1" placeholder="如 72.6"></label>
+<label>计划完成情况<select id="log-status"><option value="">请选择</option><option value="完成">完成</option><option value="部分完成">部分完成</option><option value="未完成">未完成</option><option value="主动休息/替换">主动休息/替换</option></select></label>
+<label>实际跑量（km）<input id="log-distance" type="number" min="0" max="60" step="0.1" placeholder="如 7.0"></label>
+<label>实际平均配速（分:秒/km）<input id="log-pace" type="text" inputmode="decimal" maxlength="10" placeholder="如 7:16"></label>
+<label>平均心率（bpm）<input id="log-hr" type="number" min="40" max="220" step="1" placeholder="如 152"></label>
+<label>主观疲劳 RPE（1–10）<input id="log-rpe" type="number" min="1" max="10" step="1" placeholder="如 6"></label>
+<label>疼痛（0–10）<input id="log-pain" type="number" min="0" max="10" step="1" placeholder="部位写在下方"></label>
+<label>睡眠（小时）<input id="log-sleep" type="number" min="0" max="16" step="0.5" placeholder="如 7.5"></label>
+<label>实际训练/变更原因（如改骑车、少做间歇）<input id="log-change" type="text" maxlength="160" placeholder="没有则留空"></label>
+<label class="full">感受与疼痛部位（例如右膝内上方 2/10、骶髂紧）<textarea id="log-notes" maxlength="500" placeholder="记录疼痛是否影响跑姿、天气、补给或其他恢复信息"></textarea></label>
+<label class="full">私教拉伸/灵活度项目（动作、组数×次数或时长、部位与感受）<textarea id="log-coach-stretch" maxlength="700" placeholder="例如：半跪髋屈肌拉伸 2×45秒/侧；臀中肌激活 2×12/侧；胸椎旋转 2×8/侧。请注明私教要求、是否无痛及想加入/替换 M 模板的项目。"></textarea></label>
+<label class="full">希望调整的后期内容（可选）<textarea id="log-adjust-request" maxlength="500" placeholder="例如：下周二有出差；跑后右膝内上方仍酸 3/10；希望将下犬式替换为私教的新动作。"></textarea></label>
+</div>
+<div class="buttons"><button type="button" id="save-log">保存/更新当天记录</button><button type="button" class="secondary" id="copy-report">复制最近 7 条反馈</button><button type="button" class="secondary" id="download-log">导出全部 CSV</button><button type="button" class="danger" id="clear-log">清空全部训练记录</button></div>
+<div class="note"><strong>调整规则：</strong>完成记录后，可点击“复制最近 7 条反馈”并粘贴到对话，由我根据记录提出调整；网页和已导入的日历不会自动更新。若疼痛 ≥3/10、改变跑姿、训练后 24 小时未改善，先暂停质量训练并咨询运动医学或康复专业人士。</div>
+<p id="log-message" class="small" aria-live="polite"></p>
+<table class="log-table"><thead><tr><th>日期</th><th>体重</th><th>完成</th><th>实际训练</th><th>HR/RPE/疼痛</th><th>睡眠</th><th>变更、感受与私教拉伸</th></tr></thead><tbody id="log-rows"><tr><td colspan="7">尚无记录。</td></tr></tbody></table>
+</div>
+
+<h2>心率、配速与执行规则</h2>
+<table><tr><th>区间</th><th>心率（估算）</th><th>用途与配速</th></tr>
+<tr><td>Z1 恢复</td><td>134–145 bpm</td><td>热身、放松跑；可完整聊天。</td></tr>
+<tr><td>Z2 有氧</td><td>145–156 bpm</td><td>轻松跑/长跑主体；初始约 7:25–8:05/km，炎热、爬坡时只看心率。</td></tr>
+<tr><td>Z3 稳态</td><td>156–165 bpm</td><td>稳态跑；约 6:55–7:15/km。</td></tr>
+<tr><td>Z4 阈值/半马专项</td><td>165–173 bpm</td><td>节奏与比赛配速段；约 6:35–6:50/km。不可全程顶在上限。</td></tr>
+<tr><td>Z5</td><td>&gt;173 bpm</td><td>仅短加速；不用于本周期的长间歇。</td></tr></table>
+<ul><li><strong>所有跑步：</strong>先 10 分钟 Z1 + 动态热身（踝关节绕环、腿前后摆、侧摆、臀桥各 10 次/侧；高抬腿和后踢腿各 2×20 米），结束后慢跑/走 8–10 分钟。</li>
+<li><strong>配速优先级：</strong>疼痛/心率 &gt; 配速。轻松跑心率超过 Z2 上限 5 bpm，立即慢跑或步行 1 分钟；间歇日宁可少做 1 组，也不硬顶。</li>
+<li><strong>力量日：</strong>动作全程无痛、RPE 6–7/10，预留 2–4 次余力；比赛周不做大重量下肢训练。</li>
+</ul>
+
+<h2>固定力量与拉伸模板</h2>
+<table><tr><th>模板</th><th>内容</th></tr>
+<tr><td><strong>G1｜下肢稳定（45–55 分钟）</strong></td><td>壶铃杯式深蹲 3×8；壶铃罗马尼亚硬拉 3×10；台阶上步 3×8/侧；臀推 3×10；弹力带侧走 3×12 步/侧；死虫 3×8/侧。重量以动作稳定为先。</td></tr>
+<tr><td><strong>G2｜上肢+核心+髋（45 分钟）</strong></td><td>坐姿划船 3×10；哑铃卧推或俯卧撑 3×8–10；高位下拉 3×10；单臂农夫走 3×30 米/侧；Pallof 抗旋转 3×10/侧；单腿臀桥 3×10/侧。</td></tr>
+<tr><td><strong>G3｜跑者力量/灵活（35–45 分钟）</strong></td><td>壶铃摆动 3×12（无腰背不适才做）；分腿蹲 3×8/侧；单腿提踵 3×12/侧；胫骨前肌抬脚 3×15；鸟狗 3×8/侧；侧桥 3×30 秒/侧。赛前两周改为各 2 组。</td></tr>
+<tr><td><strong>M｜每日睡前 12–15 分钟</strong></td><td>90/90 髋转换 2×8/侧；猫牛式 2×8；下犬式 2×30 秒；低弓步髂腰肌拉伸 2×30 秒/侧；梨状肌“4”字拉伸 2×30 秒/侧；仰卧抱膝呼吸 2×5 次。均保持无痛，不强压骶髂关节。</td></tr>
+<tr><td><strong>P｜私教踝—髋—核心（20–25 分钟，每周 2–3 次；替换 M 的部分内容）</strong></td><td>坐姿弹力带足背屈伸 2×12/侧；垫脚行走（脚跟走+前脚掌走）各 2×15 米；后箭步蹲前脚掌主动撑地 2×8/侧，配胸椎旋转 2×6/侧；弹力带髋外展 2×12/侧；90/90 坐地转髋后挺身起立 2×6/侧；单腿罗马尼亚硬拉 2×8/侧；泡沫轴放松骶髂邻近臀肌与下背 60–90 秒/侧。泡沫轴不直接滚压骨性骶髂关节或引发放射痛处。</td></tr>
+</table>
+
+<h2 id="all-plan">逐日计划</h2>
+<p class="small">“M”表示做上方每日拉伸模板。每周一、三、六分别安排 G1、G2、G3；网球日以轻松对打为主，避免额外冲刺。跑量为含热身、放松的总距离。</p>
+<table id="plan-table">
+<tr><th>日期</th><th>训练</th><th>重点</th></tr>
+<tr class="week"><td colspan="3">第 1 周｜建立规律（10/26–11/01，约 27 km）</td></tr>
+<tr><td>10/26 周一</td><td>G1 + M</td><td>不额外跑步；记录晨重、睡眠与膝不适评分。</td></tr>
+<tr><td>10/27 周二</td><td>7 km：Z1–2 热身后 6×2 分钟 Z4（6:35–6:50/km），每组慢跑 2 分钟；M</td><td>快段动作轻快，膝不适则改 5×2 分钟。</td></tr>
+<tr><td>10/28 周三</td><td>G2 + M</td><td>上肢、核心与髋控制；不加跑。</td></tr>
+<tr><td>10/29 周四</td><td>网球 60–90 分钟（RPE≤6）+ M</td><td>充分热身；避免连续救球和爆发跳起。</td></tr>
+<tr><td>10/30 周五</td><td>7 km：2 km Z2 + 3 km Z3（6:55–7:15/km）+ 2 km 放松；M</td><td>稳态而非冲刺。</td></tr>
+<tr><td>10/31 周六</td><td>G3 + M</td><td>壶铃摆动若骶髂不适，换臀桥 3×12。</td></tr>
+<tr><td>11/01 周日</td><td>13 km Z2（145–156 bpm，约 7:25–8:05/km）+ M</td><td>每 35–40 分钟补水；跑后 30 分钟内补 25–30 g 蛋白。</td></tr>
+
+<tr class="week"><td colspan="3">第 2 周｜提高专项耐力（11/02–11/08，约 32 km）</td></tr>
+<tr><td>11/02 周一</td><td>G1 + M</td><td>保持 RPE 6–7，不练到力竭。</td></tr>
+<tr><td>11/03 周二</td><td>8 km：热身后 5×600 m Z4（6:25–6:40/km），组间慢跑 400 m；M</td><td>若心率飙升或动作散，完成 4 组即可。</td></tr>
+<tr><td>11/04 周三</td><td>G2 + M</td><td>专注抗旋转与臀中肌。</td></tr>
+<tr><td>11/05 周四</td><td>网球 60–90 分钟（轻至中等）+ M</td><td>若下肢酸痛，改 45 分钟技术对打。</td></tr>
+<tr><td>11/06 周五</td><td>9 km：2 km Z2 + 2×2 km Z4（6:45→6:40/km），中间慢跑 800 m + 放松；M</td><td>后段心率不超过 172。</td></tr>
+<tr><td>11/07 周六</td><td>G3 + M</td><td>提踵、胫骨前肌动作做慢做满。</td></tr>
+<tr><td>11/08 周日</td><td>15 km Z2，末 2 km 可至 Z3（6:55–7:10/km）+ M</td><td>携带水；测试比赛日可接受的能量胶。</td></tr>
+
+<tr class="week"><td colspan="3">第 3 周｜峰值专项（11/09–11/15，约 36 km）</td></tr>
+<tr><td>11/09 周一</td><td>G1（每项 2 组）+ M</td><td>开始降低下肢力量总量。</td></tr>
+<tr><td>11/10 周二</td><td>9 km：热身后 4×1 km Z4（6:30–6:40/km），组间慢跑 500 m；M</td><td>追求均匀，不追求最快单组。</td></tr>
+<tr><td>11/11 周三</td><td>G2 + M</td><td>上肢、核心为主；腿部不加量。</td></tr>
+<tr><td>11/12 周四</td><td>网球 45–75 分钟（RPE≤5）+ M</td><td>不比赛、不高强度抢球。</td></tr>
+<tr><td>11/13 周五</td><td>10 km：2 km Z2 + 5 km 连续 Z4（6:45/km 起，状态佳最后 1 km 6:38）+ 放松；M</td><td>这次是 A 目标可行性检查；若无法控制在 173 bpm 以下，比赛采用 B 目标。</td></tr>
+<tr><td>11/14 周六</td><td>G3（每项 2 组）+ M</td><td>不做新动作，不追求壶铃重量。</td></tr>
+<tr><td>11/15 周日</td><td>17 km Z2，末 3 km Z3（约 6:55–7:10/km）+ M</td><td>按比赛计划练补给：45 分钟起每 35–40 分钟 1 胶，配水。</td></tr>
+
+<tr class="week"><td colspan="3">第 4 周｜最后长跑（11/16–11/22，约 37 km）</td></tr>
+<tr><td>11/16 周一</td><td>G1（每项 2 组）+ M</td><td>全程保留余力。</td></tr>
+<tr><td>11/17 周二</td><td>9 km：热身后 8×400 m（6:10–6:25/km），每组慢跑 400 m；M</td><td>跑姿稳定优先，心率可短暂进 Z5。</td></tr>
+<tr><td>11/18 周三</td><td>G2（每项 2 组）+ M</td><td>减少下肢负荷。</td></tr>
+<tr><td>11/19 周四</td><td>网球 45–60 分钟轻松对打 + M</td><td>疲劳或膝痛则休息、仅 M。</td></tr>
+<tr><td>11/20 周五</td><td>10 km：2 km Z2 + 6 km 比赛配速测试（先 3 km 6:50/km，后 3 km 6:40–6:45/km）+ 放松；M</td><td>全程心率≤173、无疼痛才保留 2:20 A 目标。</td></tr>
+<tr><td>11/21 周六</td><td>G3（每项 2 组、无需摆动）+ M</td><td>以活动度、提踵和核心为主。</td></tr>
+<tr><td>11/22 周日</td><td>18 km Z2；最后 4 km 若轻松则 6:50–6:55/km + M</td><td>最后一次长跑；绝不把它跑成比赛。</td></tr>
+
+<tr class="week"><td colspan="3">比赛周｜减量、保持感觉（11/23–11/29，约 32 km，含比赛）</td></tr>
+<tr><td>11/23 周一</td><td>G2 轻量：各 2×8 + M</td><td>不做 G1/G3，不造成腿部酸痛。</td></tr>
+<tr><td>11/24 周二</td><td>6 km：Z2 热身后 3×3 分钟比赛配速（6:38–6:45/km），组间慢跑 2 分钟；M</td><td>结束时应感觉“还想再跑”。</td></tr>
+<tr><td>11/25 周三</td><td>休息 + M（可散步 30 分钟）</td><td>睡眠优先。</td></tr>
+<tr><td>11/26 周四</td><td>5 km Z1–2 + 4×20 秒轻快加速（非冲刺）+ M</td><td>取消网球。</td></tr>
+<tr><td>11/27 周五</td><td>休息 + M</td><td>准备装备；正常吃饭，避免高纤维新食物。</td></tr>
+<tr><td>11/28 周六</td><td>20 分钟散步 + M</td><td>补水、早睡；不拉到疼。</td></tr>
+<tr><td>11/29 周日</td><td><strong>千岛湖半马 21.1 km</strong>：0–5 km 6:50–6:55/km；5–15 km 6:43–6:48/km；15 km 后无痛、HR≤173 才逐步至 6:35–6:40/km；M 仅轻柔呼吸拉伸。</td><td>赛前 2–3 小时吃熟悉的碳水早餐；起跑前 10 分钟慢跑+动态热身；35–40 分钟、75–80 分钟各 1 胶并配水。</td></tr>
+
+<tr class="week"><td colspan="3">恢复周｜恢复优先（11/30–12/06）</td></tr>
+<tr><td>11/30 周一</td><td>休息；散步 20–30 分钟 + M</td><td>不按摩疼痛点，不做深度拉伸。</td></tr>
+<tr><td>12/01 周二</td><td>散步或骑车 30 分钟 Z1 + M</td><td>腿沉重是正常恢复反应。</td></tr>
+<tr><td>12/02 周三</td><td>G2 轻量（各 2×8）+ M</td><td>无下肢爆发动作。</td></tr>
+<tr><td>12/03 周四</td><td>休息 + M</td><td>网球暂停。</td></tr>
+<tr><td>12/04 周五</td><td>4–5 km Z1–2 + M</td><td>任何局部痛即步行结束。</td></tr>
+<tr><td>12/05 周六</td><td>G3 轻量（摆动改臀桥）+ M</td><td>每项 2 组。</td></tr>
+<tr><td>12/06 周日</td><td>6–8 km Z2 + M</td><td>以轻松恢复为唯一目标。</td></tr>
+
+<tr class="week"><td colspan="3">12 月基础重建｜每周跑 3 次、力量 3 次、网球 1 次</td></tr>
+<tr><td>12/07 周一</td><td>G1 + M</td><td>恢复常规重量的 70%。</td></tr>
+<tr><td>12/08 周二</td><td>7 km：Z2 + 6×1 分钟 Z4，间隔慢跑 90 秒；M</td><td>快段不追配速。</td></tr>
+<tr><td>12/09 周三</td><td>G2 + M</td><td>核心与髋稳定。</td></tr>
+<tr><td>12/10 周四</td><td>网球 60 分钟 + M</td><td>中等强度。</td></tr>
+<tr><td>12/11 周五</td><td>8 km：2 km Z2 + 4 km Z3 + 2 km 放松；M</td><td>稳定呼吸。</td></tr>
+<tr><td>12/12 周六</td><td>G3 + M</td><td>动作质量优先。</td></tr>
+<tr><td>12/13 周日</td><td>12 km Z2 + M</td><td>补水与蛋白恢复。</td></tr>
+<tr><td>12/14 周一</td><td>G1 + M</td><td>若仍疲劳，深蹲和硬拉各减 1 组。</td></tr>
+<tr><td>12/15 周二</td><td>8 km：热身后 5×600 m Z4，间隔慢跑 400 m；M</td><td>均匀完成。</td></tr>
+<tr><td>12/16 周三</td><td>G2 + M</td><td>不加跑。</td></tr>
+<tr><td>12/17 周四</td><td>网球 60–90 分钟 + M</td><td>避免连续两天高强度。</td></tr>
+<tr><td>12/18 周五</td><td>9 km：2 km Z2 + 5 km Z3–低 Z4 + 2 km 放松；M</td><td>配速约 6:50–7:05/km。</td></tr>
+<tr><td>12/19 周六</td><td>G3 + M</td><td>生日当天训练量可减半，保证愉快与恢复。</td></tr>
+<tr><td>12/20 周日</td><td>14 km Z2 + M</td><td>全程可交谈。</td></tr>
+<tr><td>12/21 周一</td><td>G1（各 2 组）+ M</td><td>降载周开始。</td></tr>
+<tr><td>12/22 周二</td><td>6 km Z2 + 6×20 秒加速；M</td><td>轻快，不冲刺。</td></tr>
+<tr><td>12/23 周三</td><td>G2（各 2 组）+ M</td><td>轻量。</td></tr>
+<tr><td>12/24 周四</td><td>网球 45–60 分钟轻松 + M</td><td>疲劳则替换为散步。</td></tr>
+<tr><td>12/25 周五</td><td>7 km：2 km Z2 + 3 km Z3 + 2 km 放松；M</td><td>恢复周不做阈值。</td></tr>
+<tr><td>12/26 周六</td><td>G3（各 2 组）+ M</td><td>不做力竭。</td></tr>
+<tr><td>12/27 周日</td><td>10–11 km Z2 + M</td><td>为下一周期留余力。</td></tr>
+<tr><td>12/28 周一</td><td>G1 + M</td><td>开始常规力量量。</td></tr>
+<tr><td>12/29 周二</td><td>8 km：热身后 4×800 m Z4（6:30–6:45/km），间隔慢跑 400 m；M</td><td>动作稳定为结束标准。</td></tr>
+<tr><td>12/30 周三</td><td>G2 + M</td><td>睡眠优先。</td></tr>
+<tr><td>12/31 周四</td><td>6 km Z2 或网球 60 分钟（二选一）+ M</td><td>不双练；记录 12 月平均体重、腰围、跑步感受并为 1 月调整。</td></tr>
+</table>
+
+<h2>减脂与恢复（支持比赛而非牺牲训练）</h2>
+<ul><li><strong>目标速度：</strong>比赛前以维持表现为先；12 月起周均下降约 0.25–0.5 kg。由 72.6 kg 至 62 kg 更适合作为约 5–9 个月目标；3 个月达成会过快，影响恢复和月经/骨健康风险。</li>
+<li><strong>饮食：</strong>每餐优先蛋白质 25–35 g；跑步/力量日保证主食，长跑前后增加碳水；日常以蔬菜、全谷、豆类、鱼禽、低脂奶为主，减少酒精、含糖饮料、精制甜点和夜宵。无需“排毒”或极低碳。</li>
+<li><strong>监测：</strong>每周固定 3–4 个早晨空腹称重，使用周平均；每月量腰围。若连续两周下降超过 0.7 kg/周、训练心率异常升高或疲劳，增加能量摄入并降训练量。</li>
+</ul>
+<p class="small">本计划为一般运动建议，不替代面对面医疗、康复或营养评估。</p>
+<script>
+(() => {
+  const key = "bunny-training-log-2026";
+  const bodyKey = "bunny-body-composition-2026";
+  const ids = ["date", "weight", "status", "distance", "pace", "hr", "rpe", "pain", "sleep", "change", "notes", "coach-stretch", "adjust-request"];
+  const bodyIds = ["date", "weight", "fat-percent", "fat-mass", "muscle", "skeletal-muscle", "visceral-fat", "water-percent", "bmr", "whr", "resting-hr", "notes"];
+  const get = () => JSON.parse(localStorage.getItem(key) || "[]");
+  const getBody = () => JSON.parse(localStorage.getItem(bodyKey) || "[]");
+  const message = text => document.getElementById("log-message").textContent = text;
+  const bodyMessage = text => document.getElementById("body-message").textContent = text;
+  const esc = value => String(value || "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
+  const render = () => {
+    const records = get().sort((a,b) => b.date.localeCompare(a.date));
+    const rows = document.getElementById("log-rows");
+    rows.innerHTML = records.length ? records.map(r => `<tr><td>${esc(r.date)}</td><td>${esc(r.weight)} kg</td><td>${esc(r.status)}</td><td>${esc(r.distance)} km</td><td>${esc(r.hr)} / ${esc(r.rpe)} / ${esc(r.pain)}</td><td>${esc(r.sleep)} h</td><td>变更：${esc(r.change)}<br>感受：${esc(r.notes)}<br>私教拉伸：${esc(r["coach-stretch"])}<br>调整诉求：${esc(r["adjust-request"])}</td></tr>`).join("") : '<tr><td colspan="7">尚无记录。</td></tr>';
+  };
+  const renderBody = () => {
+    const records = getBody().sort((a,b) => b.date.localeCompare(a.date));
+    const rows = document.getElementById("body-rows");
+    rows.innerHTML = records.length ? records.map(r => `<tr><td>${esc(r.date)}</td><td>${esc(r.weight)} kg</td><td>${esc(r["fat-percent"])}% / ${esc(r["fat-mass"])} kg</td><td>${esc(r.muscle)} / ${esc(r["skeletal-muscle"])} kg</td><td>${esc(r["visceral-fat"])}</td><td>${esc(r["water-percent"])}%</td><td>${esc(r.bmr)} kcal / ${esc(r.whr)} / ${esc(r["resting-hr"])} bpm<br>${esc(r.notes)}</td></tr>`).join("") : '<tr><td colspan="7">尚无体测记录。</td></tr>';
+  };
+  const localDate = () => {
+    const now = new Date();
+    return `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,"0")}-${String(now.getDate()).padStart(2,"0")}`;
+  };
+  const today = localDate();
+  const todayRow = Array.from(document.querySelectorAll("#plan-table tr")).find(row =>
+    row.cells.length === 3 && row.cells[0].textContent.trim().startsWith(today.slice(5).replace("-", "/")));
+  document.getElementById("today-plan").textContent = todayRow && today.startsWith("2026-")
+    ? `${todayRow.cells[0].textContent}：${todayRow.cells[1].textContent}。${todayRow.cells[2].textContent}`
+    : `${today} 不在本计划日期范围内，请查看完整计划或咨询调整。`;
+  const loadForm = (prefix, fields, records, date) => {
+    const record = records.find(item => item.date === date) || {};
+    for (const id of fields) document.getElementById(`${prefix}-${id}`).value = id === "date" ? date : (record[id] ?? "");
+  };
+  const setupDateForm = (prefix, fields, getter) => {
+    const dateInput = document.getElementById(`${prefix}-date`);
+    let activeDate = today, dirty = false;
+    loadForm(prefix, fields, getter(), activeDate);
+    for (const id of fields.filter(id => id !== "date")) {
+      document.getElementById(`${prefix}-${id}`).addEventListener("input", () => { dirty = true; });
+      document.getElementById(`${prefix}-${id}`).addEventListener("change", () => { dirty = true; });
+    }
+    dateInput.addEventListener("change", () => {
+      if (dirty && !confirm("当前修改尚未保存，切换日期会丢弃这些修改。继续吗？")) { dateInput.value = activeDate; return; }
+      activeDate = dateInput.value; dirty = false; loadForm(prefix, fields, getter(), activeDate);
+    });
+    return {
+      saved: () => { dirty = false; },
+      refresh: () => { activeDate = dateInput.value || today; dirty = false; loadForm(prefix, fields, getter(), activeDate); },
+      dirty: () => dirty
+    };
+  };
+  const logForm = setupDateForm("log", ids, get);
+  const bodyForm = setupDateForm("body", bodyIds, getBody);
+  const validForm = (prefix, fields) => fields.every(id => {
+    const input = document.getElementById(`${prefix}-${id}`);
+    if (input.checkValidity()) return true;
+    input.reportValidity(); return false;
+  });
+  const download = (name, data, type) => {
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(new Blob([data], {type}));
+    link.href = url; link.download = name; link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+  const backupMessage = text => document.getElementById("backup-message").textContent = text;
+  document.getElementById("export-json").addEventListener("click", () => {
+    try {
+      const backup = {format:"bunny-training-backup", version:1, exportedAt:new Date().toISOString(), training:get(), body:getBody()};
+      download(`Bunny_训练记录_${localDate()}.json`, JSON.stringify(backup, null, 2), "application/json;charset=utf-8");
+      backupMessage(`已生成备份：训练 ${backup.training.length} 条，体测 ${backup.body.length} 条。请妥善保管文件。`);
+    } catch (error) { backupMessage(`导出失败：${error.message}`); }
+  });
+  document.getElementById("import-button").addEventListener("click", () => document.getElementById("import-json").click());
+  document.getElementById("import-json").addEventListener("change", async event => {
+    const file = event.target.files[0];
+    if (!file) return;
+    try {
+      if (file.size > 5 * 1024 * 1024) throw new Error("备份文件超过 5 MB。");
+      const data = JSON.parse(await file.text());
+      if (!data || data.format !== "bunny-training-backup" || data.version !== 1 || !Array.isArray(data.training) || !Array.isArray(data.body)) throw new Error("不是受支持的 Bunny 备份文件。");
+      const check = (records, fields) => {
+        const dates = new Set();
+        return records.map(record => {
+          if (!record || typeof record !== "object" || Array.isArray(record) || typeof record.date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(record.date) || dates.has(record.date)) throw new Error("记录日期无效或重复。");
+          const dateCheck = document.createElement("input"); dateCheck.type = "date"; dateCheck.value = record.date;
+          if (dateCheck.value !== record.date) throw new Error("记录包含无效日期。");
+          dates.add(record.date);
+          const clean = {};
+          for (const id of fields) {
+            const value = record[id];
+            if (value !== undefined && value !== null && typeof value !== "string" && typeof value !== "number") throw new Error("记录字段格式无效。");
+            clean[id] = value == null ? "" : String(value);
+            if (clean[id].length > 5000) throw new Error("记录字段过长。");
+          }
+          return clean;
+        });
+      };
+      const incomingTraining = check(data.training, ids), incomingBody = check(data.body, bodyIds);
+      const existingTraining = get(), existingBody = getBody();
+      const conflictCount = (existing, incoming) => incoming.filter(r => existing.some(e => e.date === r.date)).length;
+      const conflicts = conflictCount(existingTraining, incomingTraining) + conflictCount(existingBody, incomingBody);
+      if (!confirm(`导入训练 ${incomingTraining.length} 条、体测 ${incomingBody.length} 条，其中 ${conflicts} 条日期冲突将以导入文件为准。未保存的表单修改会丢失。继续吗？`)) return;
+      const merge = (old, incoming) => [...old.filter(r => !incoming.some(n => n.date === r.date)), ...incoming];
+      const oldTraining = localStorage.getItem(key), oldBody = localStorage.getItem(bodyKey);
+      try {
+        localStorage.setItem(key, JSON.stringify(merge(existingTraining, incomingTraining)));
+        localStorage.setItem(bodyKey, JSON.stringify(merge(existingBody, incomingBody)));
+      } catch (error) {
+        if (oldTraining === null) localStorage.removeItem(key); else localStorage.setItem(key, oldTraining);
+        if (oldBody === null) localStorage.removeItem(bodyKey); else localStorage.setItem(bodyKey, oldBody);
+        throw error;
+      }
+      render(); renderBody(); logForm.refresh(); bodyForm.refresh();
+      backupMessage("导入成功；未冲突的原有记录已保留。");
+    } catch (error) { backupMessage(`导入失败，未完成同步：${error.message}`); }
+    finally { event.target.value = ""; }
+  });
+  document.getElementById("body-image").addEventListener("change", event => {
+    const file = event.target.files[0], preview = document.getElementById("body-preview");
+    if (!file) return;
+    preview.src = URL.createObjectURL(file); preview.hidden = false;
+    bodyMessage("已加载本次图片预览。请核对并填写数值后保存；图片仅临时预览，不会保存到浏览器记录。");
+  });
+  document.getElementById("save-body").addEventListener("click", () => {
+    const record = Object.fromEntries(bodyIds.map(id => [id, document.getElementById(`body-${id}`).value.trim()]));
+    if (!record.date || !record.weight || !record["fat-percent"]) return bodyMessage("请至少填写测量日期、体重和体脂率。");
+    if (!validForm("body", bodyIds)) return bodyMessage("请检查标红字段的数值范围。");
+    const records = getBody().filter(item => item.date !== record.date);
+    try { records.push(record); localStorage.setItem(bodyKey, JSON.stringify(records)); }
+    catch (error) { return bodyMessage(`保存失败：${error.message}`); }
+    bodyForm.saved(); renderBody(); bodyMessage(`已保存 ${record.date} 的体测。`);
+  });
+  document.getElementById("copy-body").addEventListener("click", async () => {
+    const record = getBody().sort((a,b) => b.date.localeCompare(a.date))[0];
+    if (!record) return bodyMessage("请先保存至少一条完整体测记录。");
+    const text = `Bunny 最新体测（请结合训练记录调整计划）\n日期：${record.date}\n体重：${record.weight} kg；体脂率：${record["fat-percent"]}%；脂肪量：${record["fat-mass"] || "-"} kg\n肌肉量：${record.muscle || "-"} kg；骨骼肌量：${record["skeletal-muscle"] || "-"} kg；内脏脂肪：${record["visceral-fat"] || "-"}\n水分：${record["water-percent"] || "-"}%；基础代谢：${record.bmr || "-"} kcal；腰臀比：${record.whr || "-"}；静息心率：${record["resting-hr"] || "-"} bpm\n其他：${record.notes || "无"}`;
+    try { await navigator.clipboard.writeText(text); bodyMessage("已复制最新体测数据；粘贴到本对话即可。"); } catch { bodyMessage("无法自动复制，请从弹窗手动复制。"); window.prompt("请手动复制以下内容：", text); }
+  });
+  document.getElementById("save-log").addEventListener("click", () => {
+    const record = Object.fromEntries(ids.map(id => [id, document.getElementById(`log-${id}`).value.trim()]));
+    if (!record.date || !record.status) return message("请填写日期和完成情况。");
+    if (!validForm("log", ids)) return message("请检查标红字段的数值范围。");
+    const records = get().filter(item => item.date !== record.date);
+    try { records.push(record); localStorage.setItem(key, JSON.stringify(records)); }
+    catch (error) { return message(`保存失败：${error.message}`); }
+    logForm.saved(); render(); message(`已保存 ${record.date} 的记录。`);
+  });
+  document.getElementById("copy-report").addEventListener("click", async () => {
+    const records = get().sort((a,b) => b.date.localeCompare(a.date)).slice(0, 7);
+    if (!records.length) return message("请先保存至少一条记录。");
+    const text = "Bunny 近 7 条训练反馈（请据此调整后续训练与拉伸模板）\n" + records.map(r => `${r.date}｜体重 ${r.weight || "-"} kg｜${r.status}｜跑量 ${r.distance || "-"} km｜配速 ${r.pace || "-"}｜平均HR ${r.hr || "-"}｜RPE ${r.rpe || "-"}｜疼痛 ${r.pain || "-"}｜睡眠 ${r.sleep || "-"} h｜变更：${r.change || "无"}｜备注：${r.notes || "无"}｜私教拉伸：${r["coach-stretch"] || "无"}｜希望调整：${r["adjust-request"] || "无"}`).join("\n");
+    try { await navigator.clipboard.writeText(text); message("已复制。将内容粘贴到我们的对话。"); } catch { message("无法自动复制，请从弹窗手动复制。"); window.prompt("请手动复制以下内容：", text); }
+  });
+  document.getElementById("download-log").addEventListener("click", () => {
+    const records = get();
+    if (!records.length) return message("请先保存至少一条记录。");
+    const header = ["日期","晨重kg","完成情况","跑量km","配速","平均心率","RPE","疼痛","睡眠小时","实际训练或变更","感受与疼痛部位","私教拉伸或灵活度项目","希望调整的后期内容"];
+    const quote = value => `"${String(value || "").replace(/"/g, '""')}"`;
+    const csv = "\uFEFF" + [header, ...records.map(r => [r.date,r.weight,r.status,r.distance,r.pace,r.hr,r.rpe,r.pain,r.sleep,r.change,r.notes,r["coach-stretch"],r["adjust-request"]])].map(row => row.map(quote).join(",")).join("\n");
+    download("Bunny_训练记录.csv", csv, "text/csv;charset=utf-8"); message("已导出 CSV 文件。");
+  });
+  document.getElementById("clear-log").addEventListener("click", () => {
+    if (confirm("确定清空当前浏览器中的全部训练记录吗？体测记录不会删除。此操作无法撤销。")) { localStorage.removeItem(key); render(); logForm.refresh(); message("已清空训练记录。"); }
+  });
+  render(); renderBody();
+})();
+</script>
+</body></html>
