@@ -13,35 +13,93 @@ ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
 .tracker{background:#f1f8ff;border:1px solid #bddcff;border-radius:8px;padding:16px;margin:20px 0}.tracker-grid{display:grid;grid-template-columns:repeat(3,minmax(170px,1fr));gap:10px}.tracker label{font-weight:700;color:#093d6b}.tracker input,.tracker select,.tracker textarea{box-sizing:border-box;width:100%;margin-top:3px;padding:7px;border:1px solid #9db9d3;border-radius:4px;font:inherit}.tracker textarea{min-height:74px;resize:vertical}.tracker .full{grid-column:1/-1}.buttons{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}button{background:#0969b3;color:#fff;border:0;border-radius:4px;padding:10px 13px;min-height:44px;font:inherit;cursor:pointer}button.secondary{background:#526b7e}button.danger{background:#a84632}.log-table{font-size:13px;display:block;overflow-x:auto}.log-table td{word-break:break-word}nav{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:5px;color:#064979;background:#dceeff;text-decoration:none}
 @media(max-width:700px){body{margin:14px auto;padding:0 12px}h1{font-size:23px}h2{font-size:20px}.tracker{padding:12px}.tracker-grid{grid-template-columns:1fr}.tracker input,.tracker select,.tracker textarea{min-height:44px;font-size:16px}.buttons button{flex:1 1 100%}#plan-table,#plan-table tbody,#plan-table tr,#plan-table td{display:block;width:auto}#plan-table{border:0}#plan-table th{display:none}#plan-table tr{margin:10px 0;border:1px solid #cbd9e6;border-radius:6px;overflow:hidden}#plan-table td{border:0;border-bottom:1px solid #e1eaf2}#plan-table td:first-child{font-weight:700;background:#e7f2fc}#plan-table tr:not(.week) td:nth-child(2)::before{content:"训练：";font-weight:700}#plan-table tr:not(.week) td:nth-child(3)::before{content:"重点：";font-weight:700}}
 @media print{body{max-width:none;margin:0;font-size:11px}h2{margin-top:16px}table{font-size:10px}.note,.warn{padding:7px}}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;background:#fafcff;padding:8px 0;z-index:2}.tabs button{background:#deebf5;color:#16476b}.tabs button[aria-selected="true"]{background:#075e9e;color:white;font-weight:700}.panel[hidden]{display:none}.card{background:white;border:1px solid #cbd9e6;border-radius:6px;padding:12px;margin:10px 0}.card p{white-space:pre-wrap;overflow-wrap:anywhere}.fields label{display:block;color:#093d6b;font-weight:700;margin:10px 0}.fields input,.fields textarea,.fields select{display:block;box-sizing:border-box;width:100%;padding:9px;font:inherit;border:1px solid #9db9d3;border-radius:4px;min-height:44px}.fields textarea{min-height:80px}.inline-link{color:#075e9e;overflow-wrap:anywhere}.status-line{font-size:14px;color:#455a6d}.coach-table-wrap{overflow-x:auto;border:1px solid #cbd9e6;border-radius:6px}.coach-table{min-width:1000px;margin:0;table-layout:fixed}.coach-table th,.coach-table td{overflow-wrap:anywhere;white-space:pre-wrap}.coach-table th:nth-child(1){width:14%}.coach-table th:nth-child(2){width:14%}.coach-table th:nth-child(3){width:8%}.coach-table th:nth-child(4){width:29%}.coach-table th:nth-child(5),.coach-table th:nth-child(6){width:10%}.coach-table th:nth-child(7){width:15%}.coach-table .buttons{margin:0}
+@media(max-width:700px){.tabs{display:grid;grid-template-columns:repeat(3,1fr)}.tabs button{font-size:14px;padding:7px 3px}.fields input,.fields textarea,.fields select{font-size:16px}}
+body{background:#f4f6ed;color:#304640}h1,h2{color:#31534a}h2{border-color:#d6e5d7}strong{color:#31534a}.note{background:#e8f1e7;border-color:#82aa93}.warn{background:#fbf2e7;border-color:#d59c66}.tracker{background:#f8faf5;border-color:#dbe8da}.tracker label,.fields label{color:#31534a}button{background:#648a78}button.secondary{background:#819991}.tabs{background:#f4f6ed}.tabs button{background:#e3ece1;color:#395b50}.tabs button[aria-selected="true"]{background:#648a78;color:#fff}
+[hidden]{display:none!important}.home{max-width:760px;margin:0 auto;padding-bottom:38px}.home-head{display:flex;justify-content:space-between;align-items:center;padding:8px 0 16px}.home-brand{font:700 15px Georgia,serif;letter-spacing:1.6px;color:#527469}.home-kicker{font:italic 18px Georgia,serif;color:#849b8c}.home-title{font-size:clamp(25px,5vw,36px);line-height:1.35;margin:5px 0;color:#31534a;border:0}.home-sub{font-size:14px;color:#728b7d;margin:0 0 20px}.home-hero{position:relative;min-height:240px;border-radius:20px;overflow:hidden;background:linear-gradient(145deg,#c1d5bc,#8eafa5 55%,#dce5ca);display:flex;align-items:end}.home-hero img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover}.home-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(24,56,47,.65),transparent 80%)}.home-hero-content{position:relative;z-index:1;color:white;padding:22px}.home-hero-content p{margin:0;font-size:12px;letter-spacing:1.5px}.home-hero-content strong{display:block;color:white;font-size:22px;margin-top:3px}.home-section-title{display:flex;justify-content:space-between;align-items:center;margin:25px 0 12px}.home-section-title h2{border:0;margin:0;font-size:19px}.home-section-title span{font-size:11px;color:#829689;letter-spacing:1px}.home-today{background:white;border:1px solid #e4ede3;border-radius:16px;padding:18px;text-align:left;width:100%;color:#304a42;box-shadow:0 7px 22px #56786a0d}.home-today strong{font-size:17px}.home-today p{font-size:13px;font-weight:400;color:#668078;margin:8px 0 2px;white-space:pre-wrap}.home-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.home-tile{background:white;border:1px solid #e3ebe1;border-radius:16px;text-align:left;padding:17px;color:#31534a;min-height:110px;box-shadow:0 5px 18px #56786a0d}.home-tile:nth-child(3n+1){background:#e7efe4}.home-tile:nth-child(3n+2){background:#f6eee7}.home-tile:nth-child(3n){background:#e7efee}.home-tile .tile-icon{display:block;font-size:21px;color:#759786;margin-bottom:7px}.home-tile strong{display:block;font-size:15px}.home-tile small{display:block;color:#71897a;font-size:12px;font-weight:400;margin-top:3px}.home-moments{width:100%;background:#e7eee6;color:#31534a;text-align:left;border-radius:16px;padding:17px}.home-moments strong{display:block;font-size:16px}.home-moments span{display:block;font-size:12px;font-weight:400;margin-top:5px}.home-back{background:#e4ede2;color:#365b4e;margin:8px 0}.moment-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}.moment-card{background:white;border:1px solid #dfe9db;border-radius:14px;overflow:hidden}.moment-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#eef1e8}.moment-info{padding:10px 12px}.moment-info p{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;margin:4px 0}.moment-info button,.moment-info a{font-size:12px;margin:4px 4px 0 0}.moment-filter{max-width:220px}.moment-empty{color:#617a6d}.home-foot{color:#85998d;font-size:11px;margin-top:28px;text-align:center}.home .small{color:#6e8577}
+.home-hero{flex-direction:column;align-items:stretch}
+.home-hero img{position:static;width:100%;height:auto;max-height:70vh;object-fit:contain}
+.home-hero::after{display:none}
+.home-hero-content{margin-top:auto;background:linear-gradient(110deg,#5f897a,#779b8c)}
+.moment-card img{height:auto;max-height:360px;aspect-ratio:auto;object-fit:contain}
+body{--page-bg:#f4f6ed;--theme-accent:#648a78;--theme-soft:#e3ece1;--theme-ink:#31534a;--tile-one:#e7efe4;--tile-two:#f6eee7;--tile-three:#e7efee;--hero-one:#5f897a;--hero-two:#779b8c;background:var(--page-bg)}
+body[data-theme="rose"]{--page-bg:#fbf2f1;--theme-accent:#a47679;--theme-soft:#f5e5e5;--theme-ink:#644b50;--tile-one:#f5e7e6;--tile-two:#f8eee3;--tile-three:#edf0e9;--hero-one:#a27679;--hero-two:#c19b9a}
+body[data-theme="blue"]{--page-bg:#eef4f7;--theme-accent:#688999;--theme-soft:#e1edf0;--theme-ink:#36535e;--tile-one:#e3edf0;--tile-two:#f1eee8;--tile-three:#e8efe7;--hero-one:#628595;--hero-two:#90a9ac}
+body[data-theme="cream"]{--page-bg:#faf5e9;--theme-accent:#9a8660;--theme-soft:#f1ebda;--theme-ink:#5c503a;--tile-one:#f2ecdc;--tile-two:#f7e9e4;--tile-three:#e9eee2;--hero-one:#988765;--hero-two:#b4a486}
+button{background:var(--theme-accent)}.tabs{background:var(--page-bg);display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin}.tabs button{flex:0 0 auto;max-width:210px;background:var(--theme-soft);color:var(--theme-ink);padding:8px 12px}.tabs button[aria-selected="true"]{background:var(--theme-accent);color:#fff}.tab-name,.tab-sub{display:block}.tab-name{font-size:13px}.tab-sub{font-size:11px;font-weight:400;opacity:.85}
+.home-tile:nth-child(3n+1){background:var(--tile-one)}.home-tile:nth-child(3n+2){background:var(--tile-two)}.home-tile:nth-child(3n){background:var(--tile-three)}.home-tile strong{color:var(--theme-ink)}.home-moments{background:var(--tile-one)}.home-hero-content{background:linear-gradient(110deg,var(--hero-one),var(--hero-two))}
+.settings-button{background:var(--theme-soft);color:var(--theme-ink);border-radius:20px;padding:7px 14px;font-size:14px}.appearance-settings{position:fixed;right:16px;top:16px;z-index:20;width:min(330px,calc(100vw - 32px));max-height:calc(100vh - 32px);overflow-y:auto;box-sizing:border-box;background:#fff;color:#304640;border:1px solid #d6e5d7;border-radius:16px;padding:18px;box-shadow:0 12px 40px #263e3533}.appearance-settings h2{margin:0 0 8px;font-size:20px}.appearance-settings p{font-size:13px;color:#526960}.appearance-settings label{display:block;font-weight:700;margin:12px 0 5px;color:#31534a}.appearance-settings select{width:100%;min-height:44px;font:inherit}.appearance-settings input[type="color"]{display:block;width:100%;height:44px}.appearance-settings .buttons button{flex:1}
+body.dark-background{color:#f5f7f3}body.dark-background .home-title,body.dark-background .home-section-title h2,body.dark-background #module-header h1{color:#fff}body.dark-background .home-brand,body.dark-background .home-kicker,body.dark-background .home-sub,body.dark-background .home-section-title span,body.dark-background .home-foot{color:#e5eee8}body.dark-background .panel{background:#f8faf5;color:#304640;border-radius:16px;padding:16px}body.dark-background .panel th,body.dark-background .panel .week{color:#304640}
+body.dark-background #module-header>p strong{color:#fff}
+.home-slideshow-controls{display:flex;gap:8px;margin-top:12px}.home-slideshow-controls button{min-height:36px;padding:5px 12px;border:1px solid #ffffff99;background:#ffffff30;color:#fff}
+.moment-info select{display:block;width:100%;min-height:40px;margin-top:8px;font:inherit}
 </style>
 </head>
 <body>
-<h1>Bunny｜半马 PB + 减脂训练计划</h1>
-<nav><a href="#today">今日计划</a><a href="#daily-log">训练记录</a><a href="#body-log">体测记录</a><a href="#backup">数据同步</a><a href="#all-plan">全部计划</a></nav>
+<main class="home" id="home">
+<div class="home-head"><span class="home-brand">BUNNY / RUN &amp; LIFE</span><button type="button" class="settings-button" aria-controls="appearance-settings" aria-expanded="false">⚙ 设置</button></div>
+<span class="home-kicker">Hello, Bunny</span><h1 class="home-title">把日子，过成喜欢的样子</h1><p class="home-sub">认真训练，也认真收藏生活里的小美好。</p>
+<div class="home-hero"><img id="home-photo" alt="跑步与比赛照片" hidden><div class="home-hero-content"><p>MY RUNNING STORY</p><strong>跑向属于自己的风景</strong><span id="home-photo-hint">到「把日子收藏起来」添加「跑步与比赛」照片</span><div id="home-slideshow-controls" class="home-slideshow-controls" hidden><button type="button" id="home-photo-previous" aria-label="上一张跑步照片">← 上一张</button><button type="button" id="home-photo-next" aria-label="下一张跑步照片">下一张 →</button></div></div></div>
+<div class="home-section-title"><h2>今天，慢慢来</h2><span>YOUR DAILY PLAN</span></div>
+<button type="button" class="home-today" data-open="panel-today"><strong>今日作战计划 →</strong><p id="home-today-text">正在读取今日计划……</p></button>
+<div class="home-section-title"><h2>我的生活与训练</h2><span>EXPLORE</span></div>
+<div class="home-grid">
+<button type="button" class="home-tile" data-open="panel-body"><span class="tile-icon">◉</span><strong>Bunny 的身体说明书</strong><small>体测记录</small></button>
+<button type="button" class="home-tile" data-open="panel-today"><span class="tile-icon">☼</span><strong>严肃跑者的今日作战计划</strong><small>每日训练计划</small></button>
+<button type="button" class="home-tile" data-open="panel-completion"><span class="tile-icon">✓</span><strong>严肃跑者的闪光记录</strong><small>训练完成情况</small></button>
+<button type="button" class="home-tile" data-open="panel-schedule"><span class="tile-icon">▦</span><strong>严肃跑者的作战地图</strong><small>逐日训练计划</small></button>
+<button type="button" class="home-tile" data-open="panel-coach"><span class="tile-icon">✿</span><strong>黄教练的魔法课堂</strong><small>私教训练记录</small></button>
+<button type="button" class="home-tile" data-open="panel-moves"><span class="tile-icon">▷</span><strong>变强动作图鉴</strong><small>动作讲解与视频</small></button>
+</div>
+<div class="home-section-title"><h2>把日子收藏起来</h2><span>MY MOMENTS</span></div>
+<button type="button" class="home-moments" data-open="panel-moments"><strong>把日子收藏起来 →</strong><span>生活小美好 · 旅行、猫咪、朋友与奔跑的故事</span></button>
+<p class="home-foot">A LITTLE MORE OF LIFE · 每一步，都值得纪念</p>
+</main>
+<header id="module-header" hidden><button type="button" class="home-back" id="home-back">← 返回主页</button> <button type="button" class="settings-button" aria-controls="appearance-settings" aria-expanded="false">⚙ 设置</button><h1>BUNNY / RUN &amp; LIFE</h1>
+<nav class="tabs" role="tablist" aria-label="训练与生活模块，可横向滚动"><button type="button" role="tab" aria-controls="panel-body"><span class="tab-name">Bunny 的身体说明书</span><span class="tab-sub">体测记录</span></button><button type="button" role="tab" aria-controls="panel-today"><span class="tab-name">严肃跑者的今日作战计划</span><span class="tab-sub">每日训练计划</span></button><button type="button" role="tab" aria-controls="panel-completion"><span class="tab-name">严肃跑者的闪光记录</span><span class="tab-sub">训练完成情况</span></button><button type="button" role="tab" aria-controls="panel-schedule"><span class="tab-name">严肃跑者的作战地图</span><span class="tab-sub">逐日训练计划</span></button><button type="button" role="tab" aria-controls="panel-coach"><span class="tab-name">黄教练的魔法课堂</span><span class="tab-sub">私教训练记录</span></button><button type="button" role="tab" aria-controls="panel-moves"><span class="tab-name">变强动作图鉴</span><span class="tab-sub">动作讲解与视频</span></button><button type="button" role="tab" aria-controls="panel-moments"><span class="tab-name">把日子收藏起来</span><span class="tab-sub">生活小美好</span></button></nav>
 <p><strong>周期：</strong>2026-10-26 至 2026-12-31　<strong>比赛：</strong>11 月 29 日杭州千岛湖半马　<strong>目标：</strong>健康减脂，并冲击半马 2:20。</p>
 <div class="note"><strong>当前基线：</strong>湘湖半马净成绩 2:33:13（7:16/km）；近期最长 20 km；周跑量约 15–40 km。2:20 需均配约 <strong>6:38/km</strong>，比最近比赛快 38 秒/km。A 目标为 2:20；B 目标 2:25（6:52/km）；当训练或天气不支持时以 B 目标出发，后程再决定是否加速。</div>
 <div class="warn"><strong>安全规则：</strong>本计划的最大心率为估算值，优先服从身体信号。膝内上方疼痛达到 3/10、改变跑姿、跑后 24 小时未改善，或骶髂痛向腿部放射时，停止质量跑，改为 30–45 分钟低强度骑车/椭圆机，并联系运动医学或康复专业人士。不采用极端节食或赛前快速减重。</div>
+</header>
+<section class="appearance-settings" id="appearance-settings" aria-label="界面设置" hidden>
+<h2>给页面换件衣服</h2><p>选择喜欢的主题，也可以单独调整背景颜色。</p>
+<label for="theme-choice">主题</label>
+<select id="theme-choice"><option value="monet">莫奈花园 · 鼠尾草绿</option><option value="rose">玫瑰晨雾 · 温柔粉</option><option value="blue">湖光微风 · 雾蓝</option><option value="cream">奶油日光 · 暖杏色</option></select>
+<label for="background-choice">自定义背景颜色</label><input id="background-choice" type="color" value="#f4f6ed">
+<div class="buttons"><button type="button" class="secondary" id="reset-background">恢复主题背景</button><button type="button" id="settings-close">完成</button></div>
+<p id="settings-message" aria-live="polite">设置只保存在当前设备和浏览器，不会自动同步。</p>
+</section>
 
-<h2 id="today">今日计划</h2>
+<section class="panel" id="panel-today" role="tabpanel">
+<h2 id="today">严肃跑者的今日作战计划｜每日训练计划</h2>
+<div class="fields"><label>查看日期<input id="plan-date" type="date"></label></div>
 <div id="today-plan" class="note">正在读取今日计划……</div>
+<div id="today-expanded"></div>
+<div class="tracker fields"><p class="small">保存后的调整仅保存在当前浏览器；页面不会自行根据完成情况调整，请先与教练或我讨论后填写。</p><label>调整后的训练内容<textarea id="plan-edit" maxlength="4000" placeholder="留空并保存可恢复原计划"></textarea></label><button type="button" id="save-plan">保存当日计划调整</button><p id="plan-message" aria-live="polite"></p></div>
+</section>
 
+<section class="panel" id="panel-body" role="tabpanel">
+<h2>Bunny 的身体说明书｜体测记录</h2>
 <h2 id="backup">电脑与手机同步</h2>
 <div class="tracker">
-<p class="small">记录保存在当前设备、当前浏览器和当前网址中，不会自动同步。先在有数据的设备导出 JSON，通过你信任的方式传到另一台设备，再在目标设备导入。同一天的冲突记录会在确认后以导入文件为准；其他日期保留。备份包含敏感健康信息且未加密，请妥善保管，不要上传到公开仓库。</p>
-<div class="buttons"><button type="button" id="export-json">导出全部记录 JSON</button><button type="button" class="secondary" id="import-button">导入 JSON 并合并</button></div>
+<p class="small">记录保存在当前设备、当前浏览器和当前网址中，不会自动同步。先在有数据的设备导出 JSON，通过你信任的方式传到另一台设备，再在目标设备导入。同一天的冲突记录会在确认后以导入文件为准；其他日期保留。JSON 包含训练、体测、计划及私教记录，<strong>不包含生活照片</strong>；请另行备份照片原件。备份包含敏感健康信息且未加密，请妥善保管，不要上传到公开仓库。</p>
+<div class="buttons"><button type="button" id="export-json">导出训练记录 JSON</button><button type="button" class="secondary" id="import-button">导入 JSON 并合并</button></div>
 <input id="import-json" type="file" accept=".json,application/json" hidden>
 <p id="backup-message" class="small" aria-live="polite"></p>
 </div>
 
 <h2 id="body-log">体脂秤报告预览与体测记录</h2>
 <div class="tracker">
-<p class="small">选择图片后可在本页面预览；本版本不能自动识别或保存图片，请核对报告并手动输入数值。结构化体测数据只保存在当前浏览器，可导出同步。如将报告图片发送到对话，我也可协助提取。</p>
+<p class="small">电脑识别：先双击桌面“Bunny_体测识别助手.exe”，保持助手窗口打开，并在它打开的计划页选择报告图片。识别在电脑本机完成，图片会短暂存入临时文件，处理后删除；请核对识别结果再手动保存。手机目前仅支持图片预览及手动录入，还不能自动识别。数据仅保存在当前浏览器，不会自动同步。</p>
 <div class="tracker-grid">
 <label class="full">上传体脂秤报告图片<input id="body-image" type="file" accept="image/*"></label>
 <img id="body-preview" alt="体脂报告预览" hidden style="max-width:100%;max-height:420px;border:1px solid #cbd9e6;border-radius:4px">
 <label>测量日期<input id="body-date" type="date"></label>
 <label>体重（kg）<input id="body-weight" type="number" min="35" max="150" step="0.1"></label>
 <label>体脂率（%）<input id="body-fat-percent" type="number" min="1" max="70" step="0.1"></label>
+<label>腰围（cm）<input id="body-waist" type="number" min="30" max="200" step="0.1"></label>
+<label>臀围（cm）<input id="body-hip" type="number" min="30" max="200" step="0.1"></label>
+<label>大腿围（cm）<input id="body-thigh" type="number" min="15" max="120" step="0.1"></label>
 <label>脂肪量（kg）<input id="body-fat-mass" type="number" min="1" max="80" step="0.1"></label>
 <label>肌肉量（kg）<input id="body-muscle" type="number" min="10" max="100" step="0.1"></label>
 <label>骨骼肌量（kg）<input id="body-skeletal-muscle" type="number" min="5" max="70" step="0.1"></label>
@@ -56,8 +114,10 @@ ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
 <p id="body-message" class="small" aria-live="polite"></p>
 <table class="log-table"><thead><tr><th>日期</th><th>体重</th><th>体脂率/脂肪量</th><th>肌肉/骨骼肌</th><th>内脏脂肪</th><th>水分</th><th>基础代谢/腰臀比/静息心率</th></tr></thead><tbody id="body-rows"><tr><td colspan="7">尚无体测记录。</td></tr></tbody></table>
 </div>
+</section>
 
-<h2 id="daily-log">每日训练记录与调整反馈</h2>
+<section class="panel" id="panel-completion" role="tabpanel">
+<h2 id="daily-log">严肃跑者的闪光记录｜训练完成情况</h2>
 <div class="tracker">
 <p class="small">选择日期可查看并编辑已保存的记录。点击保存后，记录只保存在当前浏览器；点击“复制反馈”后粘贴到对话中，我可据此建议调整后续训练和拉伸模板，网页不会自动调整。</p>
 <div class="tracker-grid">
@@ -78,9 +138,12 @@ ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
 <div class="buttons"><button type="button" id="save-log">保存/更新当天记录</button><button type="button" class="secondary" id="copy-report">复制最近 7 条反馈</button><button type="button" class="secondary" id="download-log">导出全部 CSV</button><button type="button" class="danger" id="clear-log">清空全部训练记录</button></div>
 <div class="note"><strong>调整规则：</strong>完成记录后，可点击“复制最近 7 条反馈”并粘贴到对话，由我根据记录提出调整；网页和已导入的日历不会自动更新。若疼痛 ≥3/10、改变跑姿、训练后 24 小时未改善，先暂停质量训练并咨询运动医学或康复专业人士。</div>
 <p id="log-message" class="small" aria-live="polite"></p>
+<p id="completion-summary" class="status-line"></p>
 <table class="log-table"><thead><tr><th>日期</th><th>体重</th><th>完成</th><th>实际训练</th><th>HR/RPE/疼痛</th><th>睡眠</th><th>变更、感受与私教拉伸</th></tr></thead><tbody id="log-rows"><tr><td colspan="7">尚无记录。</td></tr></tbody></table>
 </div>
+</section>
 
+<section class="panel" id="panel-schedule" role="tabpanel">
 <h2>心率、配速与执行规则</h2>
 <table><tr><th>区间</th><th>心率（估算）</th><th>用途与配速</th></tr>
 <tr><td>Z1 恢复</td><td>134–145 bpm</td><td>热身、放松跑；可完整聊天。</td></tr>
@@ -94,7 +157,7 @@ ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
 </ul>
 
 <h2>固定力量与拉伸模板</h2>
-<table><tr><th>模板</th><th>内容</th></tr>
+<table id="template-table"><tr><th>模板</th><th>内容</th></tr>
 <tr><td><strong>G1｜下肢稳定（45–55 分钟）</strong></td><td>壶铃杯式深蹲 3×8；壶铃罗马尼亚硬拉 3×10；台阶上步 3×8/侧；臀推 3×10；弹力带侧走 3×12 步/侧；死虫 3×8/侧。重量以动作稳定为先。</td></tr>
 <tr><td><strong>G2｜上肢+核心+髋（45 分钟）</strong></td><td>坐姿划船 3×10；哑铃卧推或俯卧撑 3×8–10；高位下拉 3×10；单臂农夫走 3×30 米/侧；Pallof 抗旋转 3×10/侧；单腿臀桥 3×10/侧。</td></tr>
 <tr><td><strong>G3｜跑者力量/灵活（35–45 分钟）</strong></td><td>壶铃摆动 3×12（无腰背不适才做）；分腿蹲 3×8/侧；单腿提踵 3×12/侧；胫骨前肌抬脚 3×15；鸟狗 3×8/侧；侧桥 3×30 秒/侧。赛前两周改为各 2 组。</td></tr>
@@ -102,7 +165,7 @@ ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
 <tr><td><strong>P｜私教踝—髋—核心（20–25 分钟，每周 2–3 次；替换 M 的部分内容）</strong></td><td>坐姿弹力带足背屈伸 2×12/侧；垫脚行走（脚跟走+前脚掌走）各 2×15 米；后箭步蹲前脚掌主动撑地 2×8/侧，配胸椎旋转 2×6/侧；弹力带髋外展 2×12/侧；90/90 坐地转髋后挺身起立 2×6/侧；单腿罗马尼亚硬拉 2×8/侧；泡沫轴放松骶髂邻近臀肌与下背 60–90 秒/侧。泡沫轴不直接滚压骨性骶髂关节或引发放射痛处。</td></tr>
 </table>
 
-<h2 id="all-plan">逐日计划</h2>
+<h2 id="all-plan">严肃跑者的作战地图｜逐日训练计划</h2>
 <p class="small">“M”表示做上方每日拉伸模板。每周一、三、六分别安排 G1、G2、G3；网球日以轻松对打为主，避免额外冲刺。跑量为含热身、放松的总距离。</p>
 <table id="plan-table">
 <tr><th>日期</th><th>训练</th><th>重点</th></tr>
@@ -194,37 +257,203 @@ ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
 <li><strong>监测：</strong>每周固定 3–4 个早晨空腹称重，使用周平均；每月量腰围。若连续两周下降超过 0.7 kg/周、训练心率异常升高或疲劳，增加能量摄入并降训练量。</li>
 </ul>
 <p class="small">本计划为一般运动建议，不替代面对面医疗、康复或营养评估。</p>
+</section>
+<section class="panel" id="panel-coach" role="tabpanel">
+<h2>黄教练的魔法课堂｜私教训练记录</h2>
+<p class="note">本地版本仅保存在当前浏览器，不会自动同步给教练。动作视频请先保存原片到电脑，再上传百度网盘；此处填写分享链接，手机点击后跳转网盘。链接可被持有者使用，请谨慎分享；网页不能自动访问或写入桌面文件夹。</p>
+<div class="fields">
+<label>训练日期<input id="coach-date" type="date"></label>
+<button type="button" id="coach-add" aria-controls="coach-editor" aria-expanded="false">＋ 添加动作</button>
+<p id="coach-message" aria-live="polite"></p>
+</div>
+<div class="tracker fields" id="coach-editor" hidden>
+<label>动作名称<input id="coach-name" maxlength="100" placeholder="例如：单腿硬拉"></label>
+<label>组数 × 次数或时长<input id="coach-sets" maxlength="100" placeholder="例如：2 组 × 8 次/侧"></label>
+<label>完成情况<select id="coach-done"><option value="未记录">未记录</option><option value="是">是</option><option value="否">否</option></select></label>
+<label>具体操作讲解<textarea id="coach-instructions" maxlength="3000"></textarea></label>
+<label>正确动作视频分享链接<input id="coach-correct" type="url" maxlength="2000" placeholder="https://..."></label>
+<label>错误动作视频分享链接<input id="coach-incorrect" type="url" maxlength="2000" placeholder="https://..."></label>
+<div class="buttons"><button type="button" id="coach-save">保存项目</button><button type="button" class="secondary" id="coach-cancel">取消</button></div>
+</div>
+<h3>当天训练项目</h3><p class="small">同一天可添加多个动作；手机可左右滑动表格。</p><div id="coach-list"></div>
+</section>
+<section class="panel" id="panel-moves" role="tabpanel">
+<h2>变强动作图鉴｜动作合辑</h2><p class="small">汇集标记为“完成”的私教项目。链接通过浏览器打开网盘；视频文件本身不存储在网页或 JSON 备份里。</p><div id="moves-list"></div>
+</section>
+<section class="panel" id="panel-moments" role="tabpanel">
+<h2>把日子收藏起来｜生活小美好</h2><p>把奔跑、旅行、猫咪和朋友，收藏在自己的小小角落。「跑步与比赛」分类中的照片会在主页主图轮播。</p>
+<div class="note">照片及故事保存在当前设备、当前浏览器的本地存储，不会自动同步或智能识别分类；清除浏览器数据可能永久删除照片。请保留照片原件并另外备份。训练记录 JSON 不包含照片。若网页公开，未上传的本地照片不会因打开网页自动发布。</div>
+<div class="tracker fields">
+<label>选择照片（JPEG、PNG 或 WebP；单张不超过 15 MB）<input id="moment-file" type="file" accept="image/jpeg,image/png,image/webp"></label>
+<label>照片日期<input id="moment-date" type="date"></label>
+<label>手动分类<select id="moment-category"><option value="待分类">待分类</option><option value="跑步与比赛">跑步与比赛</option><option value="旅行与风景">旅行与风景</option><option value="猫咪">猫咪</option><option value="朋友与家人">朋友与家人</option><option value="生活点滴">生活点滴</option></select></label>
+<label>这个瞬间的故事<textarea id="moment-caption" maxlength="500" placeholder="写下此刻想记住的事……"></textarea></label>
+<button type="button" id="moment-save">保存这份小美好</button><p class="small" id="moment-message" aria-live="polite"></p>
+</div>
+<div class="fields"><label>查看分类<select id="moment-filter" class="moment-filter"><option value="">全部照片</option><option value="待分类">待分类</option><option value="跑步与比赛">跑步与比赛</option><option value="旅行与风景">旅行与风景</option><option value="猫咪">猫咪</option><option value="朋友与家人">朋友与家人</option><option value="生活点滴">生活点滴</option></select></label></div>
+<div id="moment-list" class="moment-grid"></div>
+</section>
 <script>
 (() => {
   const key = "bunny-training-log-2026";
   const bodyKey = "bunny-body-composition-2026";
+  const planKey = "bunny-daily-plans-v1";
+  const coachKey = "bunny-coach-exercises-v1";
   const ids = ["date", "weight", "status", "distance", "pace", "hr", "rpe", "pain", "sleep", "change", "notes", "coach-stretch", "adjust-request"];
-  const bodyIds = ["date", "weight", "fat-percent", "fat-mass", "muscle", "skeletal-muscle", "visceral-fat", "water-percent", "bmr", "whr", "resting-hr", "notes"];
+  const bodyIds = ["date", "weight", "fat-percent", "fat-mass", "muscle", "skeletal-muscle", "visceral-fat", "water-percent", "bmr", "whr", "resting-hr", "notes", "waist", "hip", "thigh"];
   const get = () => JSON.parse(localStorage.getItem(key) || "[]");
   const getBody = () => JSON.parse(localStorage.getItem(bodyKey) || "[]");
+  const getPlans = () => JSON.parse(localStorage.getItem(planKey) || "[]");
+  const getCoach = () => JSON.parse(localStorage.getItem(coachKey) || "[]");
   const message = text => document.getElementById("log-message").textContent = text;
   const bodyMessage = text => document.getElementById("body-message").textContent = text;
   const esc = value => String(value || "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
   const render = () => {
     const records = get().sort((a,b) => b.date.localeCompare(a.date));
+    const done = records.filter(r => r.status === "完成").length;
+    document.getElementById("completion-summary").textContent = `已记录 ${records.length} 天，完成 ${done} 天，部分完成 ${records.filter(r => r.status === "部分完成").length} 天。`;
     const rows = document.getElementById("log-rows");
     rows.innerHTML = records.length ? records.map(r => `<tr><td>${esc(r.date)}</td><td>${esc(r.weight)} kg</td><td>${esc(r.status)}</td><td>${esc(r.distance)} km</td><td>${esc(r.hr)} / ${esc(r.rpe)} / ${esc(r.pain)}</td><td>${esc(r.sleep)} h</td><td>变更：${esc(r.change)}<br>感受：${esc(r.notes)}<br>私教拉伸：${esc(r["coach-stretch"])}<br>调整诉求：${esc(r["adjust-request"])}</td></tr>`).join("") : '<tr><td colspan="7">尚无记录。</td></tr>';
   };
   const renderBody = () => {
     const records = getBody().sort((a,b) => b.date.localeCompare(a.date));
     const rows = document.getElementById("body-rows");
-    rows.innerHTML = records.length ? records.map(r => `<tr><td>${esc(r.date)}</td><td>${esc(r.weight)} kg</td><td>${esc(r["fat-percent"])}% / ${esc(r["fat-mass"])} kg</td><td>${esc(r.muscle)} / ${esc(r["skeletal-muscle"])} kg</td><td>${esc(r["visceral-fat"])}</td><td>${esc(r["water-percent"])}%</td><td>${esc(r.bmr)} kcal / ${esc(r.whr)} / ${esc(r["resting-hr"])} bpm<br>${esc(r.notes)}</td></tr>`).join("") : '<tr><td colspan="7">尚无体测记录。</td></tr>';
+    rows.innerHTML = records.length ? records.map(r => `<tr><td>${esc(r.date)}</td><td>${esc(r.weight)} kg</td><td>${esc(r["fat-percent"])}% / ${esc(r["fat-mass"])} kg</td><td>${esc(r.muscle)} / ${esc(r["skeletal-muscle"])} kg</td><td>${esc(r["visceral-fat"])}</td><td>${esc(r["water-percent"])}%</td><td>${esc(r.bmr)} kcal / ${esc(r.whr)} / ${esc(r["resting-hr"])} bpm<br>腰/臀/大腿：${esc(r.waist)} / ${esc(r.hip)} / ${esc(r.thigh)} cm<br>${esc(r.notes)}</td></tr>`).join("") : '<tr><td colspan="7">尚无体测记录。</td></tr>';
   };
   const localDate = () => {
     const now = new Date();
     return `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,"0")}-${String(now.getDate()).padStart(2,"0")}`;
   };
   const today = localDate();
-  const todayRow = Array.from(document.querySelectorAll("#plan-table tr")).find(row =>
-    row.cells.length === 3 && row.cells[0].textContent.trim().startsWith(today.slice(5).replace("-", "/")));
-  document.getElementById("today-plan").textContent = todayRow && today.startsWith("2026-")
-    ? `${todayRow.cells[0].textContent}：${todayRow.cells[1].textContent}。${todayRow.cells[2].textContent}`
-    : `${today} 不在本计划日期范围内，请查看完整计划或咨询调整。`;
+  const themeColors = {monet:"#f4f6ed",rose:"#fbf2f1",blue:"#eef4f7",cream:"#faf5e9"};
+  const settingsKey = "bunny-appearance-v1";
+  const settingsPanel = document.getElementById("appearance-settings");
+  const themeChoice = document.getElementById("theme-choice"), backgroundChoice = document.getElementById("background-choice");
+  const settingsMessage = document.getElementById("settings-message"), settingsButtons = document.querySelectorAll(".settings-button");
+  let appearance = {theme:"monet", background:null};
+  function applyAppearance() {
+    const color = appearance.background || themeColors[appearance.theme];
+    document.body.dataset.theme = appearance.theme;
+    document.body.style.setProperty("--page-bg", color);
+    themeChoice.value = appearance.theme; backgroundChoice.value = color;
+    const channels = [1,3,5].map(i => {
+      const value = parseInt(color.slice(i,i+2),16) / 255;
+      return value <= 0.04045 ? value / 12.92 : Math.pow((value + 0.055) / 1.055,2.4);
+    });
+    document.body.classList.toggle("dark-background", 0.2126*channels[0] + 0.7152*channels[1] + 0.0722*channels[2] < 0.179);
+  }
+  function saveAppearance() {
+    applyAppearance();
+    try {
+      localStorage.setItem(settingsKey, JSON.stringify(appearance));
+      settingsMessage.textContent = "已保存在当前设备和浏览器，不会自动同步。";
+    } catch (error) { settingsMessage.textContent = `设置未能保存，刷新后可能恢复：${error.message}`; }
+  }
+  try {
+    const saved = localStorage.getItem(settingsKey);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (!parsed || !Object.prototype.hasOwnProperty.call(themeColors,parsed.theme) || (parsed.background !== null && !/^#[0-9a-f]{6}$/i.test(parsed.background))) throw new Error("保存的设置格式无效");
+      appearance = parsed;
+    }
+  } catch (error) { settingsMessage.textContent = `无法读取已保存的设置，暂用默认主题：${error.message}`; }
+  applyAppearance();
+  function setSettingsOpen(open) {
+    settingsPanel.hidden = !open;
+    settingsButtons.forEach(button => button.setAttribute("aria-expanded", String(open)));
+    if (open) themeChoice.focus();
+  }
+  settingsButtons.forEach(button => button.addEventListener("click", () => setSettingsOpen(settingsPanel.hidden)));
+  document.getElementById("settings-close").addEventListener("click", () => setSettingsOpen(false));
+  settingsPanel.addEventListener("keydown", event => { if (event.key === "Escape") setSettingsOpen(false); });
+  themeChoice.addEventListener("change", () => { appearance = {theme:themeChoice.value, background:null}; saveAppearance(); });
+  backgroundChoice.addEventListener("input", () => { appearance.background = backgroundChoice.value; saveAppearance(); });
+  document.getElementById("reset-background").addEventListener("click", () => { appearance.background = null; saveAppearance(); });
+  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+  function activateTab(tab) {
+    document.getElementById("home").hidden = true;
+    document.getElementById("module-header").hidden = false;
+    tabs.forEach(item => {
+      const active = item === tab;
+      item.setAttribute("aria-selected", String(active));
+      item.tabIndex = active ? 0 : -1;
+      document.getElementById(item.getAttribute("aria-controls")).hidden = !active;
+    });
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => activateTab(tab));
+    tab.addEventListener("keydown", event => {
+      if (!["ArrowLeft","ArrowRight"].includes(event.key)) return;
+      event.preventDefault();
+      const target = tabs[(index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length];
+      activateTab(target); target.focus();
+    });
+  });
+  function showHome() {
+    document.getElementById("home").hidden = false;
+    document.getElementById("module-header").hidden = true;
+    tabs.forEach(item => {
+      item.setAttribute("aria-selected", "false"); item.tabIndex = -1;
+      document.getElementById(item.getAttribute("aria-controls")).hidden = true;
+    });
+  }
+  document.getElementById("home-back").addEventListener("click", showHome);
+  document.querySelectorAll("[data-open]").forEach(button => button.addEventListener("click", () => {
+    const tab = tabs.find(item => item.getAttribute("aria-controls") === button.dataset.open);
+    if (tab) { activateTab(tab); window.scrollTo(0, 0); }
+  }));
+  if (new URLSearchParams(location.hash.slice(1)).get("ocr")) activateTab(tabs[0]);
+  else showHome();
+  const templateRows = Array.from(document.querySelectorAll("#template-table tr")).slice(1);
+  const scheduleRows = Array.from(document.querySelectorAll("#plan-table tr")).filter(row => row.cells.length === 3 && /^\d\d\/\d\d/.test(row.cells[0].textContent.trim()));
+  function showPlan(date) {
+    const original = date.startsWith("2026-") && scheduleRows.find(row => row.cells[0].textContent.trim().startsWith(date.slice(5).replace("-", "/")));
+    const custom = getPlans().find(r => r.date === date);
+    const text = custom ? custom.content : original ? original.cells[1].textContent.trim() : "";
+    document.getElementById("today-plan").textContent = text ? `${date} ${custom ? "（已调整）" : "（原计划）"}：${text}${original ? "。重点：" + original.cells[2].textContent : ""}` : `${date} 没有原定计划，可在下方新增。`;
+    const todayOriginal = today.startsWith("2026-") && scheduleRows.find(row => row.cells[0].textContent.trim().startsWith(today.slice(5).replace("-", "/")));
+    const todayCustom = getPlans().find(r => r.date === today);
+    document.getElementById("home-today-text").textContent = todayCustom ? `${today}（已调整）：${todayCustom.content}` : todayOriginal ? `${today}：${todayOriginal.cells[1].textContent.trim()}` : `${today} 暂无原定计划，点击查看或新增。`;
+    const expanded = document.getElementById("today-expanded");
+    expanded.replaceChildren();
+    const codes = [...text.matchAll(/\b(G1|G2|G3|M|P)\b/g)].map(match => match[1]);
+    [...new Set(codes)].forEach(code => {
+      const row = templateRows.find(r => r.cells[0].textContent.trim().startsWith(code + "｜"));
+      if (!row) return;
+      const card = document.createElement("div"); card.className = "card";
+      const title = document.createElement("strong"); title.textContent = row.cells[0].textContent;
+      const detail = document.createElement("p"); detail.textContent = row.cells[1].textContent;
+      card.append(title, detail); expanded.append(card);
+    });
+    if (codes.length) {
+      const note = document.createElement("p"); note.className = "small";
+      note.textContent = "以上为动作模板；若当天计划或重点注明减组、替换或跳过动作，以当天说明为准。";
+      expanded.prepend(note);
+    }
+    const log = get().find(r => r.date === date), body = getBody().find(r => r.date === date);
+    const info = document.createElement("p"); info.className = "status-line";
+    info.textContent = `同日完成情况：${log ? log.status : "尚未记录"}；体测：${body && body.weight ? body.weight + " kg" : "尚未记录"}`;
+    expanded.append(info);
+  }
+  const planDate = document.getElementById("plan-date"), planEdit = document.getElementById("plan-edit");
+  let planDirty = false, activePlanDate = today;
+  function loadPlan(date) { activePlanDate = date; planDate.value = date; planEdit.value = (getPlans().find(r => r.date === date) || {}).content || ""; planDirty = false; showPlan(date); }
+  planEdit.addEventListener("input", () => { planDirty = true; });
+  planDate.addEventListener("change", () => {
+    if (planDirty && !confirm("计划调整尚未保存，切换日期会丢弃修改。继续吗？")) { planDate.value = activePlanDate; return; }
+    loadPlan(planDate.value);
+  });
+  document.getElementById("save-plan").addEventListener("click", () => {
+    const message = document.getElementById("plan-message");
+    if (!planDate.value) { message.textContent = "请选择日期。"; return; }
+    try {
+      const plans = getPlans().filter(r => r.date !== planDate.value), content = planEdit.value.trim();
+      if (content) plans.push({date:planDate.value, content});
+      localStorage.setItem(planKey, JSON.stringify(plans)); loadPlan(planDate.value);
+      message.textContent = "已保存计划调整。";
+    } catch (error) { message.textContent = `保存失败：${error.message}`; }
+  });
+  loadPlan(today);
   const loadForm = (prefix, fields, records, date) => {
     const record = records.find(item => item.date === date) || {};
     for (const id of fields) document.getElementById(`${prefix}-${id}`).value = id === "date" ? date : (record[id] ?? "");
@@ -263,9 +492,9 @@ ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
   const backupMessage = text => document.getElementById("backup-message").textContent = text;
   document.getElementById("export-json").addEventListener("click", () => {
     try {
-      const backup = {format:"bunny-training-backup", version:1, exportedAt:new Date().toISOString(), training:get(), body:getBody()};
+      const backup = {format:"bunny-training-backup", version:2, exportedAt:new Date().toISOString(), training:get(), body:getBody(), plans:getPlans(), coach:getCoach()};
       download(`Bunny_训练记录_${localDate()}.json`, JSON.stringify(backup, null, 2), "application/json;charset=utf-8");
-      backupMessage(`已生成备份：训练 ${backup.training.length} 条，体测 ${backup.body.length} 条。请妥善保管文件。`);
+      backupMessage(`已生成备份：训练 ${backup.training.length} 条，体测 ${backup.body.length} 条，计划 ${backup.plans.length} 条，私教项目 ${backup.coach.length} 条。请妥善保管文件。`);
     } catch (error) { backupMessage(`导出失败：${error.message}`); }
   });
   document.getElementById("import-button").addEventListener("click", () => document.getElementById("import-json").click());
@@ -275,7 +504,7 @@ ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
     try {
       if (file.size > 5 * 1024 * 1024) throw new Error("备份文件超过 5 MB。");
       const data = JSON.parse(await file.text());
-      if (!data || data.format !== "bunny-training-backup" || data.version !== 1 || !Array.isArray(data.training) || !Array.isArray(data.body)) throw new Error("不是受支持的 Bunny 备份文件。");
+      if (!data || data.format !== "bunny-training-backup" || ![1,2].includes(data.version) || !Array.isArray(data.training) || !Array.isArray(data.body) || (data.version === 2 && (!Array.isArray(data.plans) || !Array.isArray(data.coach)))) throw new Error("不是受支持的 Bunny 备份文件。");
       const check = (records, fields) => {
         const dates = new Set();
         return records.map(record => {
@@ -287,41 +516,126 @@ ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
           for (const id of fields) {
             const value = record[id];
             if (value !== undefined && value !== null && typeof value !== "string" && typeof value !== "number") throw new Error("记录字段格式无效。");
-            clean[id] = value == null ? "" : String(value);
-            if (clean[id].length > 5000) throw new Error("记录字段过长。");
+            if (value !== undefined) clean[id] = value == null ? "" : String(value);
+            if (clean[id] && clean[id].length > 5000) throw new Error("记录字段过长。");
           }
           return clean;
         });
       };
       const incomingTraining = check(data.training, ids), incomingBody = check(data.body, bodyIds);
-      const existingTraining = get(), existingBody = getBody();
-      const conflictCount = (existing, incoming) => incoming.filter(r => existing.some(e => e.date === r.date)).length;
-      const conflicts = conflictCount(existingTraining, incomingTraining) + conflictCount(existingBody, incomingBody);
-      if (!confirm(`导入训练 ${incomingTraining.length} 条、体测 ${incomingBody.length} 条，其中 ${conflicts} 条日期冲突将以导入文件为准。未保存的表单修改会丢失。继续吗？`)) return;
-      const merge = (old, incoming) => [...old.filter(r => !incoming.some(n => n.date === r.date)), ...incoming];
-      const oldTraining = localStorage.getItem(key), oldBody = localStorage.getItem(bodyKey);
+      const incomingPlans = check(data.plans || [], ["date","content"]);
+      const incomingCoach = (data.coach || []).map(r => {
+        if (!r || typeof r !== "object" || typeof r.id !== "string" || !/^[a-zA-Z0-9-]{1,100}$/.test(r.id)) throw new Error("私教项目 ID 无效。");
+        const cleaned = check([r], ["date","name","sets","done","instructions","correct","incorrect"])[0];
+        if (!cleaned.name || !["是","否","未记录"].includes(cleaned.done)) throw new Error("私教项目内容无效。");
+        for (const link of [cleaned.correct,cleaned.incorrect]) if (link && !/^https?:\/\//i.test(link)) throw new Error("视频链接无效。");
+        return {...cleaned, id:r.id};
+      });
+      if (new Set(incomingCoach.map(r => r.id)).size !== incomingCoach.length) throw new Error("私教项目 ID 重复。");
+      const existingTraining = get(), existingBody = getBody(), existingPlans = getPlans(), existingCoach = getCoach();
+      const conflictCount = (existing, incoming, field) => incoming.filter(r => existing.some(e => e[field] === r[field])).length;
+      const conflicts = conflictCount(existingTraining,incomingTraining,"date") + conflictCount(existingBody,incomingBody,"date") + conflictCount(existingPlans,incomingPlans,"date") + conflictCount(existingCoach,incomingCoach,"id");
+      if (!confirm(`导入训练 ${incomingTraining.length} 条、体测 ${incomingBody.length} 条、计划 ${incomingPlans.length} 条、私教项目 ${incomingCoach.length} 条，其中 ${conflicts} 条冲突将以导入文件为准。未保存的表单修改会丢失。继续吗？`)) return;
+      const merge = (old, incoming, field) => [...old.filter(r => !incoming.some(n => n[field] === r[field])), ...incoming.map(n => ({...old.find(r => r[field] === n[field]), ...n}))];
+      const storageKeys = [key,bodyKey,planKey,coachKey];
+      const oldValues = storageKeys.map(k => localStorage.getItem(k));
       try {
-        localStorage.setItem(key, JSON.stringify(merge(existingTraining, incomingTraining)));
-        localStorage.setItem(bodyKey, JSON.stringify(merge(existingBody, incomingBody)));
+        localStorage.setItem(key, JSON.stringify(merge(existingTraining,incomingTraining,"date")));
+        localStorage.setItem(bodyKey, JSON.stringify(merge(existingBody,incomingBody,"date")));
+        localStorage.setItem(planKey, JSON.stringify(merge(existingPlans,incomingPlans,"date")));
+        localStorage.setItem(coachKey, JSON.stringify(merge(existingCoach,incomingCoach,"id")));
       } catch (error) {
-        if (oldTraining === null) localStorage.removeItem(key); else localStorage.setItem(key, oldTraining);
-        if (oldBody === null) localStorage.removeItem(bodyKey); else localStorage.setItem(bodyKey, oldBody);
+        storageKeys.forEach((k,i) => { if (oldValues[i] === null) localStorage.removeItem(k); else localStorage.setItem(k, oldValues[i]); });
         throw error;
       }
-      render(); renderBody(); logForm.refresh(); bodyForm.refresh();
+      render(); renderBody(); logForm.refresh(); bodyForm.refresh(); loadPlan(planDate.value); resetCoach(); renderCoach(); updateScheduleStatus();
       backupMessage("导入成功；未冲突的原有记录已保留。");
     } catch (error) { backupMessage(`导入失败，未完成同步：${error.message}`); }
     finally { event.target.value = ""; }
   });
-  document.getElementById("body-image").addEventListener("change", event => {
+  const normalizeOcr = text => text.replace(/\s+/g, "").replace(/[．。]/g, ".").replace(/％/g, "%").replace(/／/g, "/");
+  function parseBodyOcr(result) {
+    if (!result || !Array.isArray(result.lines) || !result.width) throw new Error("识别结果格式无效。");
+    const lines = result.lines.filter(words => words.length).map(words => ({
+      text: normalizeOcr(words.map(w => w.text).join("")),
+      x: Math.min(...words.map(w => w.x)),
+      right: Math.max(...words.map(w => w.x + w.width)),
+      y: words.reduce((sum,w) => sum + w.y, 0) / words.length
+    }));
+    const fields = {
+      "weight": ["体重", "kg"], "fat-percent": ["体脂率", "%"],
+      "fat-mass": ["脂肪量", "kg"], "muscle": ["肌肉量", "kg"],
+      "skeletal-muscle": ["骨骼肌量", "kg"], "visceral-fat": ["内脏脂肪等级", ""],
+      "water-percent": ["身体水分", "%"], "bmr": ["基础代谢率", "kca"], "whr": ["推测腰臀比", ""]
+    };
+    const out = {};
+    for (const [field, [label, unit]] of Object.entries(fields)) {
+      const labelLine = lines.find(line => line.text === label);
+      if (!labelLine) continue;
+      const candidates = lines.filter(line => line.x >= labelLine.right - 5 &&
+        line.x - labelLine.right < result.width * 0.32 &&
+        Math.abs(line.y - labelLine.y) < result.width * 0.016)
+        .sort((a,b) => a.x - b.x);
+      for (const line of candidates) {
+        const match = line.text.match(/^(\d+(?:\.\d+)?)(kg|%|kca[lI]?|)[|《]?$/i);
+        if (match && (!unit || match[2].toLowerCase().startsWith(unit))) {
+          const input = document.getElementById(`body-${field}`);
+          const number = Number(match[1]);
+          if (number >= Number(input.min) && number <= Number(input.max)) out[field] = match[1];
+          break;
+        }
+      }
+    }
+    for (const line of lines) {
+      const match = line.text.match(/(?:^|[^\d])(20\d{2})[\/-](\d{1,2})[\/-](\d{1,2})(?:$|[^\d])/);
+      if (match) {
+        const date = `${match[1]}-${match[2].padStart(2,"0")}-${match[3].padStart(2,"0")}`;
+        const probe = document.createElement("input"); probe.type = "date"; probe.value = date;
+        if (probe.value) out.date = date;
+        break;
+      }
+    }
+    return out;
+  }
+  document.getElementById("body-image").addEventListener("change", async event => {
     const file = event.target.files[0], preview = document.getElementById("body-preview");
     if (!file) return;
     preview.src = URL.createObjectURL(file); preview.hidden = false;
-    bodyMessage("已加载本次图片预览。请核对并填写数值后保存；图片仅临时预览，不会保存到浏览器记录。");
+    const token = new URLSearchParams(location.hash.slice(1)).get("ocr");
+    if (!token || !/^[0-9a-f]{64}$/.test(token)) {
+      bodyMessage("图片已预览。电脑请从桌面识别助手打开计划后重新选图；手机目前不支持自动识别，请手动填写。");
+      event.target.value = ""; return;
+    }
+    if (bodyForm.dirty() && !confirm("当前体测修改尚未保存，识别回填会丢弃未保存的修改。继续吗？")) { event.target.value = ""; return; }
+    bodyMessage("正在电脑本机识别，请稍候……");
+    try {
+      if (file.size > 10 * 1024 * 1024) throw new Error("图片超过 10 MB，请选择更小的图片。");
+      const response = await fetch("http://127.0.0.1:49427/ocr", {method:"POST", headers:{"Content-Type":"application/octet-stream", "X-Bunny-OCR-Token":token}, body:file});
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || `识别服务错误（${response.status}）。`);
+      const values = parseBodyOcr(result);
+      if (!Object.keys(values).some(id => id !== "date")) throw new Error("没有识别到体测数值，请用清晰完整的报告截图重试。");
+      const targetDate = values.date || document.getElementById("body-date").value;
+      if (!targetDate) throw new Error("没有识别到测量日期，请先选择日期后重试。");
+      const existing = getBody().find(record => record.date === targetDate);
+      if (existing && !confirm(`${targetDate} 已有体测记录。回填将覆盖这次识别出的字段，未识别字段保留；保存后才会更新记录。继续吗？`)) return;
+      document.getElementById("body-date").value = targetDate;
+      bodyForm.refresh();
+      for (const [id, value] of Object.entries(values)) {
+        if (id === "date") continue;
+        const input = document.getElementById(`body-${id}`);
+        input.value = value; input.dispatchEvent(new Event("input", {bubbles:true}));
+      }
+      const names = {"date":"测量日期","weight":"体重","fat-percent":"体脂率","fat-mass":"脂肪量","muscle":"肌肉量","skeletal-muscle":"骨骼肌量","visceral-fat":"内脏脂肪等级","water-percent":"身体水分","bmr":"基础代谢","whr":"腰臀比"};
+      const missing = Object.keys(names).filter(id => !values[id]).map(id => names[id]);
+      bodyMessage(`已回填 ${Object.keys(values).length} 项。请对照图片逐项核对后点击保存；未识别项请手动填写：${missing.join("、") || "无"}。报告心率不自动视为静息心率。`);
+    } catch (error) {
+      bodyMessage(`识别失败：${error.message}。请确认已打开桌面识别助手并保持窗口运行，然后重新选择图片。`);
+    } finally { event.target.value = ""; }
   });
   document.getElementById("save-body").addEventListener("click", () => {
     const record = Object.fromEntries(bodyIds.map(id => [id, document.getElementById(`body-${id}`).value.trim()]));
-    if (!record.date || !record.weight || !record["fat-percent"]) return bodyMessage("请至少填写测量日期、体重和体脂率。");
+    if (!record.date || !bodyIds.some(id => id !== "date" && record[id])) return bodyMessage("请填写测量日期和至少一项体测数据。");
     if (!validForm("body", bodyIds)) return bodyMessage("请检查标红字段的数值范围。");
     const records = getBody().filter(item => item.date !== record.date);
     try { records.push(record); localStorage.setItem(bodyKey, JSON.stringify(records)); }
@@ -331,7 +645,7 @@ ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
   document.getElementById("copy-body").addEventListener("click", async () => {
     const record = getBody().sort((a,b) => b.date.localeCompare(a.date))[0];
     if (!record) return bodyMessage("请先保存至少一条完整体测记录。");
-    const text = `Bunny 最新体测（请结合训练记录调整计划）\n日期：${record.date}\n体重：${record.weight} kg；体脂率：${record["fat-percent"]}%；脂肪量：${record["fat-mass"] || "-"} kg\n肌肉量：${record.muscle || "-"} kg；骨骼肌量：${record["skeletal-muscle"] || "-"} kg；内脏脂肪：${record["visceral-fat"] || "-"}\n水分：${record["water-percent"] || "-"}%；基础代谢：${record.bmr || "-"} kcal；腰臀比：${record.whr || "-"}；静息心率：${record["resting-hr"] || "-"} bpm\n其他：${record.notes || "无"}`;
+    const text = `Bunny 最新体测（请结合训练记录调整计划）\n日期：${record.date}\n体重：${record.weight || "-"} kg；体脂率：${record["fat-percent"] || "-"}%；脂肪量：${record["fat-mass"] || "-"} kg\n腰围：${record.waist || "-"} cm；臀围：${record.hip || "-"} cm；大腿围：${record.thigh || "-"} cm\n肌肉量：${record.muscle || "-"} kg；骨骼肌量：${record["skeletal-muscle"] || "-"} kg；内脏脂肪：${record["visceral-fat"] || "-"}\n水分：${record["water-percent"] || "-"}%；基础代谢：${record.bmr || "-"} kcal；腰臀比：${record.whr || "-"}；静息心率：${record["resting-hr"] || "-"} bpm\n其他：${record.notes || "无"}`;
     try { await navigator.clipboard.writeText(text); bodyMessage("已复制最新体测数据；粘贴到本对话即可。"); } catch { bodyMessage("无法自动复制，请从弹窗手动复制。"); window.prompt("请手动复制以下内容：", text); }
   });
   document.getElementById("save-log").addEventListener("click", () => {
@@ -358,9 +672,251 @@ ul{padding-left:22px} .small{font-size:13px;color:#455a6d} strong{color:#063b68}
     download("Bunny_训练记录.csv", csv, "text/csv;charset=utf-8"); message("已导出 CSV 文件。");
   });
   document.getElementById("clear-log").addEventListener("click", () => {
-    if (confirm("确定清空当前浏览器中的全部训练记录吗？体测记录不会删除。此操作无法撤销。")) { localStorage.removeItem(key); render(); logForm.refresh(); message("已清空训练记录。"); }
+    if (confirm("确定清空当前浏览器中的全部训练记录吗？体测记录不会删除。此操作无法撤销。")) { localStorage.removeItem(key); render(); logForm.refresh(); showPlan(planDate.value); updateScheduleStatus(); message("已清空训练记录。"); }
   });
-  render(); renderBody();
+  const coachFields = ["date","name","sets","done","instructions","correct","incorrect"];
+  let editingCoachId = null, coachDirty = false, coachActiveDate = today;
+  const coachField = id => document.getElementById(`coach-${id}`);
+  const coachMessage = text => document.getElementById("coach-message").textContent = text;
+  const coachEditor = document.getElementById("coach-editor"), coachAdd = document.getElementById("coach-add");
+  coachFields.filter(id => id !== "date").forEach(id => {
+    coachField(id).addEventListener("input", () => { coachDirty = true; });
+    coachField(id).addEventListener("change", () => { coachDirty = true; });
+  });
+  function resetCoach() {
+    editingCoachId = null; coachDirty = false;
+    coachFields.filter(id => id !== "date").forEach(id => { coachField(id).value = id === "done" ? "未记录" : ""; });
+    coachEditor.hidden = true; coachAdd.setAttribute("aria-expanded", "false");
+    document.getElementById("coach-save").textContent = "保存项目";
+  }
+  coachField("date").value = today;
+  coachField("date").addEventListener("change", () => {
+    if (coachDirty && !confirm("当前动作尚未保存，切换日期会丢弃修改。继续吗？")) { coachField("date").value = coachActiveDate; return; }
+    coachActiveDate = coachField("date").value;
+    resetCoach(); renderCoach(); coachMessage("");
+  });
+  coachAdd.addEventListener("click", () => {
+    if (!coachField("date").value) { coachMessage("请先选择训练日期。"); return; }
+    if (coachDirty && !confirm("当前动作尚未保存，添加新动作会丢弃修改。继续吗？")) return;
+    resetCoach(); coachEditor.hidden = false; coachAdd.setAttribute("aria-expanded", "true");
+    coachMessage(""); coachField("name").focus();
+  });
+  function videoLink(url, label) {
+    if (!url || !/^https?:\/\//i.test(url)) return "";
+    return `<a class="inline-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+  }
+  function coachCard(r) {
+    const card = document.createElement("article"); card.className = "card";
+    card.innerHTML = `<strong>${esc(r.name)}</strong><p>日期：${esc(r.date)}　训练量：${esc(r.sets) || "未填写"}　完成：${esc(r.done)}</p><p>操作讲解：${esc(r.instructions) || "未填写"}</p><p>${videoLink(r.correct,"正确动作视频")} ${videoLink(r.incorrect,"错误动作视频")}</p>`;
+    return card;
+  }
+  function coachRow(r) {
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>${esc(r.name)}</td><td>${esc(r.sets) || "未填写"}</td><td>${esc(r.done)}</td><td>${esc(r.instructions) || "未填写"}</td><td>${videoLink(r.correct,"正确视频") || "未填写"}</td><td>${videoLink(r.incorrect,"错误视频") || "未填写"}</td><td></td>`;
+      const edit = document.createElement("button"); edit.type = "button"; edit.textContent = "编辑"; edit.className = "secondary";
+      edit.addEventListener("click", () => {
+        if (coachDirty && !confirm("当前私教项目尚未保存，继续将丢弃修改。")) return;
+        coachFields.filter(id => id !== "date").forEach(id => { coachField(id).value = r[id] || (id === "done" ? "未记录" : ""); });
+        editingCoachId = r.id; coachDirty = false; document.getElementById("coach-save").textContent = "更新项目";
+        coachEditor.hidden = false; coachAdd.setAttribute("aria-expanded", "true");
+        coachField("name").focus();
+      });
+      const del = document.createElement("button"); del.type = "button"; del.textContent = "删除"; del.className = "danger";
+      del.addEventListener("click", () => {
+        if (!confirm(`删除 ${r.date} 的“${r.name}”记录？不会删除网盘或电脑里的视频。`)) return;
+        try {
+          localStorage.setItem(coachKey, JSON.stringify(getCoach().filter(item => item.id !== r.id)));
+          if (editingCoachId === r.id) resetCoach();
+          renderCoach(); coachMessage("已删除项目记录。");
+        } catch (error) { coachMessage(`删除失败：${error.message}`); }
+      });
+      const buttons = document.createElement("div"); buttons.className = "buttons"; buttons.append(edit,del); row.cells[6].append(buttons);
+      return row;
+  }
+  function renderCoach() {
+    const records = getCoach().sort((a,b) => b.date.localeCompare(a.date));
+    const list = document.getElementById("coach-list"); list.replaceChildren();
+    const session = records.filter(r => r.date === coachField("date").value);
+    if (!session.length) list.textContent = "当天尚无训练项目，点击“＋ 添加动作”开始记录。";
+    else {
+      const wrapper = document.createElement("div"); wrapper.className = "coach-table-wrap"; wrapper.tabIndex = 0;
+      wrapper.setAttribute("aria-label", "当天训练项目表格，可水平滚动");
+      const table = document.createElement("table"); table.className = "coach-table";
+      table.innerHTML = "<thead><tr><th scope=\"col\">动作名称</th><th scope=\"col\">组数 × 次数或时长</th><th scope=\"col\">完成情况</th><th scope=\"col\">操作讲解</th><th scope=\"col\">正确视频</th><th scope=\"col\">错误视频</th><th scope=\"col\">操作</th></tr></thead><tbody></tbody>";
+      session.forEach(r => table.tBodies[0].append(coachRow(r))); wrapper.append(table); list.append(wrapper);
+    }
+    const moves = document.getElementById("moves-list"); moves.replaceChildren();
+    const completed = records.filter(r => r.done === "是");
+    if (!completed.length) moves.textContent = "尚无已完成的私教项目。";
+    else completed.forEach(r => moves.append(coachCard(r)));
+  }
+  document.getElementById("coach-save").addEventListener("click", () => {
+    if (!validForm("coach", coachFields)) { coachMessage("请检查日期和视频链接。"); return; }
+    const record = Object.fromEntries(coachFields.map(id => [id,coachField(id).value.trim()]));
+    if (!record.date || !record.name) { coachMessage("请填写训练日期和动作名称。"); return; }
+    for (const link of [record.correct,record.incorrect]) if (link && !/^https?:\/\//i.test(link)) { coachMessage("视频链接必须以 http:// 或 https:// 开头。"); return; }
+    record.id = editingCoachId || (globalThis.crypto && crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`);
+    try {
+      const records = getCoach();
+      const index = records.findIndex(r => r.id === record.id);
+      if (index >= 0) records[index] = record; else records.push(record);
+      localStorage.setItem(coachKey, JSON.stringify(records)); resetCoach(); renderCoach(); coachMessage("已保存项目。");
+    } catch (error) { coachMessage(`保存失败：${error.message}`); }
+  });
+  document.getElementById("coach-cancel").addEventListener("click", () => {
+    if (coachDirty && !confirm("当前私教项目尚未保存，确定清空？")) return;
+    resetCoach(); coachMessage("");
+  });
+  function updateScheduleStatus() {
+    const records = get(), plans = getPlans();
+    scheduleRows.forEach(row => {
+      let note = row.cells[2].querySelector(".saved-status");
+      if (!note) { note = document.createElement("div"); note.className = "saved-status small"; row.cells[2].append(note); }
+      const date = `2026-${row.cells[0].textContent.trim().slice(0,5).replace("/", "-")}`;
+      const record = records.find(r => r.date === date), custom = plans.find(r => r.date === date);
+      note.textContent = `完成：${record ? record.status : "尚未记录"}${custom ? "；已调整：" + custom.content : ""}`;
+    });
+  }
+  document.getElementById("save-plan").addEventListener("click", updateScheduleStatus);
+  document.getElementById("save-log").addEventListener("click", () => { showPlan(planDate.value); updateScheduleStatus(); });
+  document.getElementById("save-body").addEventListener("click", () => showPlan(planDate.value));
+  const momentFile = document.getElementById("moment-file"), momentDate = document.getElementById("moment-date");
+  const momentCategory = document.getElementById("moment-category"), momentCaption = document.getElementById("moment-caption");
+  const momentFilter = document.getElementById("moment-filter"), momentList = document.getElementById("moment-list");
+  const momentMessage = document.getElementById("moment-message"), momentSave = document.getElementById("moment-save");
+  const homePhoto = document.getElementById("home-photo"), homePhotoHint = document.getElementById("home-photo-hint");
+  const slideshowControls = document.getElementById("home-slideshow-controls");
+  let photoUrls = [], photoRenderVersion = 0, homeSlides = [], homeSlideIndex = 0, slideshowTimer = null;
+  function showHomeSlide(index) {
+    if (!homeSlides.length) return;
+    homeSlideIndex = (index + homeSlides.length) % homeSlides.length;
+    const slide = homeSlides[homeSlideIndex];
+    homePhoto.src = slide.url; homePhoto.alt = slide.caption || "跑步与比赛照片";
+    homePhoto.hidden = false;
+    homePhotoHint.textContent = `跑步与比赛 · ${homeSlideIndex + 1} / ${homeSlides.length}${slide.caption ? " · " + slide.caption : ""}`;
+  }
+  document.getElementById("home-photo-previous").addEventListener("click", () => showHomeSlide(homeSlideIndex - 1));
+  document.getElementById("home-photo-next").addEventListener("click", () => showHomeSlide(homeSlideIndex + 1));
+  momentDate.value = today;
+  function openMoments() {
+    return new Promise((resolve, reject) => {
+      if (!window.indexedDB) { reject(new Error("此浏览器不支持本地照片存储")); return; }
+      let settled = false;
+      const request = indexedDB.open("bunny-life-moments-v1", 1);
+      request.onupgradeneeded = () => {
+        if (!request.result.objectStoreNames.contains("photos")) request.result.createObjectStore("photos", {keyPath:"id"});
+      };
+      request.onerror = () => { if (!settled) { settled = true; reject(request.error || new Error("无法打开照片存储")); } };
+      request.onblocked = () => { if (!settled) { settled = true; reject(new Error("照片存储被其他页面占用，请关闭其他页面后重试")); } };
+      request.onsuccess = () => {
+        if (settled) { request.result.close(); return; }
+        settled = true; resolve(request.result);
+      };
+    });
+  }
+  async function photoOperation(mode, operation) {
+    const db = await openMoments();
+    return new Promise((resolve, reject) => {
+      let tx, request;
+      try {
+        tx = db.transaction("photos", mode);
+        request = operation(tx.objectStore("photos"));
+      } catch (error) { db.close(); reject(error); return; }
+      tx.oncomplete = () => { const result = request.result; db.close(); resolve(result); };
+      tx.onabort = () => { const error = tx.error || request.error || new Error("照片存储事务已中止"); db.close(); reject(error); };
+      tx.onerror = () => {};
+    });
+  }
+  function photoError(error) {
+    return error && error.name === "QuotaExceededError" ? "设备空间不足或浏览器存储配额已满，请保留原图并释放空间后重试。" : `照片存储操作失败：${error && error.message ? error.message : "未知错误"}。请检查浏览器是否允许本地存储。`;
+  }
+  async function renderMoments() {
+    const version = ++photoRenderVersion;
+    try {
+      const photos = await photoOperation("readonly", store => store.getAll());
+      if (version !== photoRenderVersion) return;
+      photos.sort((a,b) => b.date.localeCompare(a.date) || b.created - a.created);
+      if (slideshowTimer) clearInterval(slideshowTimer);
+      homePhoto.removeAttribute("src");
+      photoUrls.forEach(url => URL.revokeObjectURL(url)); photoUrls = [];
+      momentList.replaceChildren();
+      homeSlides = photos.filter(photo => photo.category === "跑步与比赛").map(photo => {
+        const url = URL.createObjectURL(photo.blob); photoUrls.push(url);
+        return {url,caption:photo.caption};
+      });
+      slideshowControls.hidden = homeSlides.length < 2;
+      if (homeSlides.length) {
+        showHomeSlide(0);
+        const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (homeSlides.length > 1 && !reduceMotion) slideshowTimer = setInterval(() => {
+          if (!document.hidden && !document.getElementById("home").hidden) showHomeSlide(homeSlideIndex + 1);
+        },6000);
+      } else {
+        homePhoto.hidden = true; homePhotoHint.textContent = "到「把日子收藏起来」添加「跑步与比赛」照片";
+      }
+      const visible = photos.filter(photo => !momentFilter.value || photo.category === momentFilter.value);
+      if (!visible.length) {
+        const empty = document.createElement("p"); empty.className = "moment-empty";
+        empty.textContent = photos.length ? "这个分类还没有照片。" : "还没有照片，先收藏第一份小美好吧。";
+        momentList.append(empty); return;
+      }
+      visible.forEach(photo => {
+        const card = document.createElement("article"); card.className = "moment-card";
+        const image = document.createElement("img"); image.alt = photo.caption || photo.category; image.loading = "lazy";
+        const url = URL.createObjectURL(photo.blob); photoUrls.push(url); image.src = url;
+        const info = document.createElement("div"); info.className = "moment-info";
+        const title = document.createElement("strong"); title.textContent = `${photo.category} · ${photo.date}`;
+        const caption = document.createElement("p"); caption.textContent = photo.caption || "未填写故事";
+        const category = document.createElement("select"); category.setAttribute("aria-label", "修改照片分类");
+        Array.from(momentCategory.options).forEach(option => category.add(option.cloneNode(true)));
+        category.value = photo.category;
+        const updateCategory = document.createElement("button"); updateCategory.type = "button"; updateCategory.className = "secondary"; updateCategory.textContent = "保存分类";
+        updateCategory.addEventListener("click", async () => {
+          if (!category.value) { momentMessage.textContent = "请选择有效的照片分类。"; return; }
+          updateCategory.disabled = true;
+          try {
+            await photoOperation("readwrite", store => store.put({...photo,category:category.value}));
+            momentMessage.textContent = "照片分类已更新。"; await renderMoments();
+          } catch (error) { momentMessage.textContent = photoError(error); updateCategory.disabled = false; }
+        });
+        const download = document.createElement("a"); download.className = "inline-link"; download.href = url; download.download = photo.name || "bunny-photo"; download.textContent = "下载原图";
+        const del = document.createElement("button"); del.type = "button"; del.className = "danger"; del.textContent = "删除";
+        del.addEventListener("click", async () => {
+          if (!confirm("确定删除这张照片及其故事？请先确认原图已另行备份。")) return;
+          del.disabled = true;
+          try { await photoOperation("readwrite", store => store.delete(photo.id)); momentMessage.textContent = "照片已删除。"; await renderMoments(); }
+          catch (error) { momentMessage.textContent = photoError(error); del.disabled = false; }
+        });
+        info.append(title, caption, category, updateCategory, download, del); card.append(image, info); momentList.append(card);
+      });
+    } catch (error) {
+      if (version !== photoRenderVersion) return;
+      const message = photoError(error); momentMessage.textContent = message;
+      momentList.textContent = message; homePhotoHint.textContent = message;
+    }
+  }
+  momentSave.addEventListener("click", async () => {
+    const file = momentFile.files[0];
+    if (!file) { momentMessage.textContent = "请先选择一张照片。"; return; }
+    if (!["image/jpeg","image/png","image/webp"].includes(file.type)) { momentMessage.textContent = "请选择 JPEG、PNG 或 WebP 照片；iPhone 的 HEIC 照片请先转换为 JPEG。"; return; }
+    if (file.size > 15 * 1024 * 1024) { momentMessage.textContent = "照片超过 15 MB，请压缩后重试，并保留原图。"; return; }
+    if (!momentDate.value) { momentMessage.textContent = "请选择照片日期。"; return; }
+    const record = {
+      id: globalThis.crypto && crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+      date: momentDate.value, category: momentCategory.value, caption: momentCaption.value.trim(),
+      name: file.name, blob: file, created: Date.now()
+    };
+    momentSave.disabled = true; momentMessage.textContent = "正在保存……";
+    try {
+      await photoOperation("readwrite", store => store.add(record));
+      momentFile.value = ""; momentCaption.value = ""; momentMessage.textContent = "已保存在当前浏览器；请另外保留照片原件。";
+      await renderMoments();
+    } catch (error) { momentMessage.textContent = photoError(error); }
+    finally { momentSave.disabled = false; }
+  });
+  momentFilter.addEventListener("change", renderMoments);
+  renderMoments();
+  resetCoach(); renderCoach(); render(); renderBody(); updateScheduleStatus();
 })();
 </script>
 </body></html>
